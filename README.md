@@ -4,6 +4,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 
 ## Table of Contents
 * [Assumptions](#assumptions)
+* [Basics](#basics)
 * [Package Managers](#package-managers)
   * [Default Sublime Packages](#default-sublime-packages)
 * [Python Specific Environment](#python-specific-environment)
@@ -27,6 +28,11 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * Mac OS X 10.10.4
 * Sublime Text 2 (3 isn't stable yet)
 * You're logged in as an administrative user of the computer.
+* You want Python 2.7.x
+
+## Basics
+
+* XCode piece
 
 ## Package Managers
 
@@ -119,6 +125,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 ### Postgresql
 
 * [Postgres.app](http://postgresapp.com/)
+* Sublime Plugin
+  * [PostgreSQL Syntax Highlighting](https://packagecontrol.io/packages/PostgreSQL%20Syntax%20Highlighting)
 
 [Back to TOC](#table-of-contents)
 
