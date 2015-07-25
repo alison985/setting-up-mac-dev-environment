@@ -3,7 +3,9 @@
 Everytime I get a new computer I have this problem. Here's my documentation.
 
 ## Table of Contents
+* [Assumptions](#assumptions)
 * [Package Managers](#package-managers)
+  * [Default Sublime Packages](#default-sublime-packages)
 * [Python Specific Environment](#python-specific-environment)
   * [Python Sublime Packages](#python-sublime-packages)
   * [Python Libraries](#python-libraries)
@@ -39,9 +41,18 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')
 ```
 
+### Default Sublime Packages
+
+* [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
+* [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
+
+[Back to TOC](#table-of-contents)
+
 ## Python Specific Environment
 
 ### Python Sublime Packages
+
+* [Jedi - python autocompletion](https://packagecontrol.io/packages/Jedi%20-%20Python%20autocompletion)
 
 ### Python Libraries
 
@@ -49,7 +60,14 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 
 #### Flask
 
+
+
 #### Django
+
+* Sublime Plugins
+  * [Djaneiro](https://packagecontrol.io/packages/Djaneiro)
+
+[Back to TOC](#table-of-contents)
 
 ## Ruby Specific Environment
 
@@ -57,9 +75,16 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 
 ### Gems
 
+* Postgresql = `gem install pg`
+
 ### Ruby Web Frameworks
 
 #### Rails
+
+* `gem install rails`
+* [Official Getting Started Guide](http://guides.rubyonrails.org/getting_started.html)
+
+[Back to TOC](#table-of-contents)
 
 ## Local Databases
 
@@ -69,3 +94,4 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 
 * [Postgres.app](http://postgresapp.com/)
 
+[Back to TOC](#table-of-contents)
