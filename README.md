@@ -7,6 +7,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * [Package Managers](#package-managers)
   * [Default Sublime Packages](#default-sublime-packages)
 * [Python Specific Environment](#python-specific-environment)
+  * [Virtual Environment](#virtual-environment)
   * [Python Sublime Packages](#python-sublime-packages)
   * [Python Libraries](#python-libraries)
   * [Python Web Frameworks](#python-web-frameworks)
@@ -77,8 +78,12 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 #### Flask
 
-* `pip install Flask`
-* [Flask Homepage](http://flask.pocoo.org/)
+* Flask 
+  * `pip install Flask`
+  * [Flask Homepage](http://flask.pocoo.org/)
+* Flask-bootstrap
+  * `pip install flask-bootstrap`
+  * [Flask-Bootstrap Homepage](http://pythonhosted.org/Flask-Bootstrap/)
 
 #### Django
 
