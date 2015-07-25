@@ -13,13 +13,13 @@ Everytime I get a new computer I have this problem. Here's my documentation.
     * [Flask](#flask)
     * [Django](#django)
 * [Ruby Specific Environment](#ruby-specific-environment)
-  * [Ruby Sublime Packages](#ruby-sublime-packages)
   * [Gems](#gems)
   * [Ruby Web Frameworks](#ruby-web-frameworks)
     * [Rails](#rails)
 * [Local Databases](#local-databases)
   * [mySQL](#mysql)
   * [PostgreSQL](#postgresql)
+* [Other Helpful Tools](#other-helpful-tools)
 
 ## Assumptions
 
@@ -50,32 +50,53 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 
 ## Python Specific Environment
 
+### Virtual Environment
+
+*
+```bash
+pip install virtualenv
+pip install virtualenvwrapper`
+export WORKON_HOME=~/Envs
+source /usr/local/bin/virtualenvwrapper.sh
+```
+* Close Terminal and Re-open Terminal.
+* `cd` to your directory
+* `mkvirtualenv venv`
+* `workon venv`
+
 ### Python Sublime Packages
 
 * [Jedi - python autocompletion](https://packagecontrol.io/packages/Jedi%20-%20Python%20autocompletion)
 
 ### Python Libraries
 
+* pandas
+* psycopg2
+
 ### Python Web Frameworks
 
 #### Flask
 
-
+* `pip install Flask`
+* [Flask Homepage](http://flask.pocoo.org/)
 
 #### Django
 
+* `pip install django`
 * Sublime Plugins
   * [Djaneiro](https://packagecontrol.io/packages/Djaneiro)
+* Django Plugins
+  * [Django Bootstrap 3](https://github.com/dyve/django-bootstrap3)
+* [Official First Django App Tutorial](https://docs.djangoproject.com/en/1.8/intro/tutorial01/)
 
 [Back to TOC](#table-of-contents)
 
 ## Ruby Specific Environment
 
-### Ruby Sublime Packages
-
 ### Gems
 
 * Postgresql = `gem install pg`
+* [Other Gems listed by Category](https://www.ruby-toolbox.com/categories)
 
 ### Ruby Web Frameworks
 
@@ -93,5 +114,12 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 ### Postgresql
 
 * [Postgres.app](http://postgresapp.com/)
+
+[Back to TOC](#table-of-contents)
+
+## Other Helpful Tools
+
+* [Dash](https://kapeli.com/dash)
+* [Github for Mac](https://mac.github.com/)
 
 [Back to TOC](#table-of-contents)
