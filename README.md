@@ -2,6 +2,23 @@
 
 Everytime I get a new computer I have this problem. Here's my documentation.
 
+## Table of Contents
+* [Package Managers](#package-managers)
+* [Python Specific Environment](#python-specific-environment)
+  * [Python Sublime Packages](#python-sublime-packages)
+  * [Python Libraries](#python-libraries)
+  * [Python Web Frameworks](#python-web-frameworks)
+    * [Flask](#flask)
+    * [Django](#django)
+* [Ruby Specific Environment](#ruby-specific-environment)
+  * [Ruby Sublime Packages](#ruby-sublime-packages)
+  * [Gems](#gems)
+  * [Ruby Web Frameworks](#ruby-web-frameworks)
+    * [Rails](#rails)
+* [Local Databases](#local-databases)
+  * [mySQL](#mysql)
+  * [PostgreSQL](#postgresql)
+
 ## Assumptions
 
 * Mac OS X 10.10.4
@@ -24,23 +41,27 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 
 ## Python Specific Environment
 
-### Sublime Packages
+### Python Sublime Packages
 
-### Libraries
+### Python Libraries
 
-### Flask
+### Python Web Frameworks
 
-### Django
+#### Flask
+
+#### Django
 
 ## Ruby Specific Environment
 
-### Sublime Packages
+### Ruby Sublime Packages
 
 ### Gems
 
-### Rails
+### Ruby Web Frameworks
 
-## Databases
+#### Rails
+
+## Local Databases
 
 ### mySQL
 
