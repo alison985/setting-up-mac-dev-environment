@@ -4,7 +4,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 
 ## Table of Contents
 * [Assumptions](#assumptions)
-* [Basics](#basics)
+* [Basic Configuration](#basic-configuration)
 * [Package Managers](#package-managers)
   * [Default Sublime Packages](#default-sublime-packages)
 * [Python Specific Environment](#python-specific-environment)
@@ -30,9 +30,57 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * You're logged in as an administrative user of the computer.
 * You want Python 2.7.x
 
-## Basics
+## Basic Configuration
 
-* XCode piece
+[Source](http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/)
+
+* Unhide Library Folder
+  * Open Finder.
+  * Press `shift-command-H` and then `command-J`, which will bring up a window that configures Finder view options.
+  * Check the “Show Library Folder” and close the window.
+
+* Bash Profile Setup
+  * `vim ~/.bash_profile`
+
+```bash
+# Finder: show hiddeh files
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
+# Always use colour output for ls.
+[[ "$OSTYPE" =~ ^darwin ]] && alias ls='command ls -G' || alias ls='command ls --color';
+
+######ALIASES###############
+alias subl='open -a "Sublime Text 2"'
+alias reload='source ~/.bash_profile'
+
+######EXPORT#############
+export EDITOR=subl
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+# Ignore duplicate commands in the history
+export HISTCONTROL=ignoredups
+# Increase the maximum number of lines contained in the history file
+# (default is 500)
+export HISTFILESIZE=10000
+# Increase the maximum number of commands to remember
+# (default is 500)
+export HISTSIZE=10000
+# Make new shells get the history lines from all previous
+# shells instead of the default "last window closed" history
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend;
+```
+
+  * `source ~/.bash_profile`
+
+* Get the XCode pieces you need
+  * `xcode-select --install`
+  * Will prompt for full version of Xcode or just command line tools
+
+[Back to TOC](#table-of-contents)
 
 ## Package Managers
 
@@ -79,6 +127,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 * pandas
 * psycopg2
+* See Also [Awesome-Python](https://github.com/vinta/awesome-python)
 
 ### Python Web Frameworks
 
@@ -103,6 +152,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 [Back to TOC](#table-of-contents)
 
 ## Ruby Specific Environment
+
+### Ruby Version Manager (RVM)
+
+* Install
+  * `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
+  * `\curl -sSL https://get.rvm.io | bash -s stable`
+* [RVM](https://rvm.io/)
 
 ### Gems
 
@@ -134,5 +190,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 * [Dash](https://kapeli.com/dash)
 * [Github for Mac](https://mac.github.com/)
+* [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+* [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/desktop/)
 
 [Back to TOC](#table-of-contents)
