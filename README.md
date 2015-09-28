@@ -80,6 +80,12 @@ shopt -s histappend;
   * `xcode-select --install`
   * Will prompt for full version of Xcode or just command line tools
 
+* mergetool/difftool
+  * [Kaleidoscope](http://www.kaleidoscopeapp.com/)
+  * Other options: 
+   * [Diff Tools on Mac OS X Blog Entry](http://www.git-tower.com/blog/diff-tools-mac/) 
+   * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
+
 [Back to TOC](#table-of-contents)
 
 ## Package Managers
