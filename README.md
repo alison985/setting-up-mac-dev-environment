@@ -7,6 +7,9 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * [Basic Configuration](#basic-configuration)
 * [Package Managers](#package-managers)
   * [Default Sublime Packages](#default-sublime-packages)
+* [Local Databases](#local-databases)
+  * [mySQL](#mysql)
+  * [PostgreSQL](#postgresql)
 * [Python Specific Environment](#python-specific-environment)
   * [Virtual Environment](#virtual-environment)
   * [Python Sublime Packages](#python-sublime-packages)
@@ -18,19 +21,19 @@ Everytime I get a new computer I have this problem. Here's my documentation.
   * [Gems](#gems)
   * [Ruby Web Frameworks](#ruby-web-frameworks)
     * [Rails](#rails)
-* [Local Databases](#local-databases)
-  * [mySQL](#mysql)
-  * [PostgreSQL](#postgresql)
 * [Other Helpful Tools](#other-helpful-tools)
 
 ## Assumptions
 
-* Mac OS X 10.10.4
+* Mac OS X 10.10.4+
 * Sublime Text 2 (3 isn't stable yet)
 * You're logged in as an administrative user of the computer.
 * You want Python 2.7.x
 
 ## Basic Configuration
+
+* Start the Xcode download/updates first through the App Store. This takes awhile.
+* [Github for Mac](https://mac.github.com/)
 
 [Source](http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/)
 
@@ -42,7 +45,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * Bash Profile Setup
   * `vim ~/.bash_profile`
 
-```bash
+```bashsi
 # Finder: show hiddeh files
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
@@ -106,6 +109,20 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 
 * [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 * [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
+* [PostgreSQL Syntax Highlighting](https://packagecontrol.io/packages/PostgreSQL%20Syntax%20Highlighting)
+* [Djaneiro](https://github.com/squ1b3r/Djaneiro)
+* Sublime Text 3 Only
+ * [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements)
+
+[Back to TOC](#table-of-contents)
+
+## Local Databases
+
+### mySQL
+
+### Postgresql
+
+* [Postgres.app](http://postgresapp.com/)
 
 [Back to TOC](#table-of-contents)
 
@@ -145,6 +162,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 * Flask-bootstrap
   * `pip install flask-bootstrap`
   * [Flask-Bootstrap Homepage](http://pythonhosted.org/Flask-Bootstrap/)
+* cookiecutter-flask (Comes with FontAwesome 4)
+  * `pip install cookiecutter-flask`
+  * `cookiecutter https://github.com/sloria/cookiecutter-flask.git`
+  * [cookiecutter-flask homepage](https://github.com/sloria/cookiecutter-flask)
 
 #### Django
 
@@ -153,6 +174,7 @@ source /usr/local/bin/virtualenvwrapper.sh
   * [Djaneiro](https://packagecontrol.io/packages/Djaneiro)
 * Django Plugins
   * [Django Bootstrap 3](https://github.com/dyve/django-bootstrap3)
+  * [django-fontawesome](https://pypi.python.org/pypi/django-fontawesome)
 * [Official First Django App Tutorial](https://docs.djangoproject.com/en/1.8/intro/tutorial01/)
 
 [Back to TOC](#table-of-contents)
@@ -180,23 +202,17 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 [Back to TOC](#table-of-contents)
 
-## Local Databases
-
-### mySQL
-
-### Postgresql
-
-* [Postgres.app](http://postgresapp.com/)
-* Sublime Plugin
-  * [PostgreSQL Syntax Highlighting](https://packagecontrol.io/packages/PostgreSQL%20Syntax%20Highlighting)
-
-[Back to TOC](#table-of-contents)
-
 ## Other Helpful Tools
 
 * [Dash](https://kapeli.com/dash)
-* [Github for Mac](https://mac.github.com/)
 * [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+ * [1Password Extensions](https://agilebits.com/onepassword/extensions)
 * [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/desktop/)
+ * [1Password Extenions](https://agilebits.com/onepassword/extensions)
+* [Slack](https://slack.com/)
+* Download from App Store with Licenses
+ * 1Password
+ * Omnigraffle
+* Toggl
 
 [Back to TOC](#table-of-contents)
