@@ -26,7 +26,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 ## Assumptions
 
 * Mac OS X 10.10.4+
-* Sublime Text 2 (3 isn't stable yet)
+* Sublime Text 3
 * You're logged in as an administrative user of the computer.
 * You want Python 2.7.x
 
@@ -99,10 +99,10 @@ shopt -s histappend;
 * [PIP](https://pip.pypa.io/en/latest/installing.html)
 
    ```sudo easy_install pip```
-* [Sublime Text 2 Package Control](https://packagecontrol.io/installation#st2) `View > Show Console`
+* [Sublime Text 3 Package Control](https://packagecontrol.io/installation) `View > Show Console`
 
    ```bash
-import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')
+import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 
 ### Default Sublime Packages
@@ -111,6 +111,10 @@ import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a309809
 * [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
 * [PostgreSQL Syntax Highlighting](https://packagecontrol.io/packages/PostgreSQL%20Syntax%20Highlighting)
 * [Djaneiro](https://github.com/squ1b3r/Djaneiro)
+* [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter)
+* [HTML-CSS-JS Prettify](https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify)
+* [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
+* [Bootstrap 3 Snippets](https://packagecontrol.io/packages/Bootstrap%203%20Snippets)
 * Sublime Text 3 Only
  * [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements)
 
