@@ -115,6 +115,7 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 * [HTML-CSS-JS Prettify](https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify)
 * [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
 * [Bootstrap 3 Snippets](https://packagecontrol.io/packages/Bootstrap%203%20Snippets)
+* RegReplace
 * Sublime Text 3 Only
  * [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements)
 
