@@ -5,6 +5,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 ## Table of Contents
 * [Assumptions](#assumptions)
 * [Basic Configuration](#basic-configuration)
+* [Mac OS Configuration](#mac-os)
 * [Package Managers](#package-managers)
   * [Default Sublime Packages](#default-sublime-packages)
 * [Local Databases](#local-databases)
@@ -90,6 +91,12 @@ shopt -s histappend;
    * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
 
 [Back to TOC](#table-of-contents)
+
+## Mac OS Configuration
+
+* Change background of login screen [Lifehacker article](http://lifehacker.com/customize-the-login-screen-on-os-x-yosemite-1683740565)
+
+  If you're running Yosemite, all you need to do is save your desired image as: /Library/Caches/com.apple.desktop.admin.png.
 
 ## Package Managers
 
