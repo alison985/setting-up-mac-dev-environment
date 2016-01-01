@@ -34,9 +34,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 ## Basic Configuration
 
 * Start the Xcode download/updates first through the App Store. This takes awhile.
-* [Github for Mac](https://mac.github.com/)
-
-[Source](http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/)
+* [Github for Mac](https://mac.github.com/)  [ [Source](http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/) ]
 
 * Unhide Library Folder
   * Open Finder.
@@ -87,8 +85,8 @@ shopt -s histappend;
 * mergetool/difftool
   * [Kaleidoscope](http://www.kaleidoscopeapp.com/)
   * Other options: 
-   * [Diff Tools on Mac OS X Blog Entry](http://www.git-tower.com/blog/diff-tools-mac/) 
-   * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
+    * [Diff Tools on Mac OS X Blog Entry](http://www.git-tower.com/blog/diff-tools-mac/) 
+    * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
 
 [Back to TOC](#table-of-contents)
 
@@ -142,7 +140,6 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 
 ### Virtual Environment
 
-*
 ```bash
 pip install virtualenv
 pip install virtualenvwrapper`
@@ -195,14 +192,34 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 ### Ruby Version Manager (RVM)
 
+* You may need to `brew install gnupg gnupg2` first so the gpg key can be installed.
+* To solve the errors from this: 
+  * `sudo chown -R $(whoami) /usr/local/lib`
+  * `brew link libgpg-error`
+  * `brew link libassuan`
+  * `brew link libgcrypt`
+  * `brew link libksba`
+  * `brew link libusb`
+  * `brew link libusb-compat`
+  * `brew link pth`
+* `brew doctor` can be helpful as well.
+
 * Install
   * `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
   * `\curl -sSL https://get.rvm.io | bash -s stable`
-* [RVM](https://rvm.io/)
+  * `source /Users/{username}/.rvm/scripts/rvm` (replace {username})
+  * `rvm install 2.2.4` (or latest stable release version on this page [Ruby](https://www.ruby-lang.org/en/))
+  * `rvm use 2.2.4`
+  * You may also want `ruby -v` or `which ruby`.
+* Link to [RVM](https://rvm.io/) for niceness sake, but avoid reading their docs at all costs. They are **horrible**.
 
 ### Gems
 
 * Postgresql = `gem install pg`
+* [Cheatset](https://github.com/Kapeli/cheatset) = `gem install cheatset`
+
+ Make cheat sheets for Dash.
+
 * [Other Gems listed by Category](https://www.ruby-toolbox.com/categories)
 
 ### Ruby Web Frameworks
