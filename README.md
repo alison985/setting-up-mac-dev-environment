@@ -52,15 +52,15 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 [[ "$OSTYPE" =~ ^darwin ]] && alias ls='command ls -G' || alias ls='command ls --color';
 
 ######ALIASES###############
-alias subl='open -a "Sublime Text 2"'
+alias sublime='open -a "Sublime Text 2"'
 alias reload='source ~/.bash_profile'
+alias edit_profile='vim ~/.bash_profile'
 
 ######EXPORT#############
-export EDITOR=subl
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export EDITOR=sublime
+
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
 # Ignore duplicate commands in the history
 export HISTCONTROL=ignoredups
 # Increase the maximum number of lines contained in the history file
@@ -74,6 +74,12 @@ export HISTSIZE=10000
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
+
+export WORKON_HOME=~/Envs
+export PROJECT_HOME=~/Envs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_VIRTULENV=/usr/local/bin/virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
 ```
 
   * `source ~/.bash_profile`
@@ -236,7 +242,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 * [Dash](https://kapeli.com/dash)
 * [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
  * [1Password Extensions](https://agilebits.com/onepassword/extensions)
- * [Amazon Assitant for Chrome](https://chrome.google.com/webstore/detail/amazon-assistant-for-chro/pbjikboenpfhbbejgkoklgkhjpfogcam)
+ * [Amazon Assistant for Chrome](https://chrome.google.com/webstore/detail/amazon-assistant-for-chro/pbjikboenpfhbbejgkoklgkhjpfogcam)
  * [Cookies](https://chrome.google.com/webstore/detail/cookies/iphcomljdfghbkdcfndaijbokpgddeno)
  * [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
  * [Pin It Button](https://chrome.google.com/webstore/detail/pin-it-button/gpdjojdkbbmdfjfahjcgigfpmkopogic)
