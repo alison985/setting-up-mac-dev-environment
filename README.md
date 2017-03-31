@@ -151,6 +151,7 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 
 ```bash
 pip install virtualenv
+pip install --ignore-installed six #handles six upgrade error
 pip install virtualenvwrapper
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
