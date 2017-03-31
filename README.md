@@ -28,7 +28,6 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 
 * Mac OS X 10.10.4+
 * Dropbox
-* Chrome
 * Sublime Text 3
 * You're logged in as an administrative user of the computer.
 * You want Python 2.7.x
@@ -243,7 +242,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 ## Other Helpful Tools
 
-* [Dash](https://kapeli.com/dash)
+* [Toggl](https://support.toggl.com/toggl-on-my-desktop/)
 * [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
  * [1Password Extensions](https://agilebits.com/onepassword/extensions)
  * [Amazon Assistant for Chrome](https://chrome.google.com/webstore/detail/amazon-assistant-for-chro/pbjikboenpfhbbejgkoklgkhjpfogcam)
