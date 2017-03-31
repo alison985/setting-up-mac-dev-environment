@@ -248,6 +248,8 @@ source /usr/local/bin/virtualenvwrapper.sh
  * [Amazon Assistant for Chrome](https://chrome.google.com/webstore/detail/amazon-assistant-for-chro/pbjikboenpfhbbejgkoklgkhjpfogcam)
  * [Cookies](https://chrome.google.com/webstore/detail/cookies/iphcomljdfghbkdcfndaijbokpgddeno)
  * [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
+ * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
+ * [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
  * [Pin It Button](https://chrome.google.com/webstore/detail/pin-it-button/gpdjojdkbbmdfjfahjcgigfpmkopogic)
  * [ColorZilla](https://chrome.google.com/webstore/detail/bhlhnicpbhignbdhedgjhgdocnmhomnp)
  * [Save to Pocket](https://chrome.google.com/webstore/detail/niloccemoadcdkdjlinkgdfekeahmflj)
