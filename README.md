@@ -27,9 +27,12 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 ## Assumptions
 
 * Mac OS X 10.10.4+
+* Dropbox
+* Chrome
 * Sublime Text 3
 * You're logged in as an administrative user of the computer.
 * You want Python 2.7.x
+* You have a VPN already
 
 ## Basic Configuration
 
