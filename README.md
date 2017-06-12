@@ -22,6 +22,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
   * [Gems](#gems)
   * [Ruby Web Frameworks](#ruby-web-frameworks)
     * [Rails](#rails)
+* [Docker](#docker)
 * [Other Helpful Tools](#other-helpful-tools)
 
 ## Assumptions
@@ -239,6 +240,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 * [Official Getting Started Guide](http://guides.rubyonrails.org/getting_started.html)
 
 [Back to TOC](#table-of-contents)
+
+## Docker
+
+* Download stable package from [https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/) and install.
 
 ## Other Helpful Tools
 
