@@ -149,6 +149,8 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 
 ### Virtual Environment
 
+Asssumes the variables for virtualenv listed in the ~/.bash_profile above.
+
 ```bash
 pip install virtualenv
 pip install --ignore-installed six #handles six upgrade error
