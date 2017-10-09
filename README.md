@@ -139,6 +139,28 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 
 ### mySQL
 
+```bash
+mysql -v
+brew install mysql
+mysql -v
+mysql -uroot
+
+# mysql-5.7.19.sierra.bottle.tar.gz as of this writing
+
+#We've installed your MySQL database without a root password. To secure it run:
+#    mysql_secure_installation
+
+#MySQL is configured to only allow connections from localhost by default
+
+#To connect run:
+#    mysql -uroot
+
+#To have launchd start mysql now and restart at login:
+#  brew services start mysql
+#Or, if you don't want/need a background service you can just run:
+#  mysql.server start
+```
+
 ### Postgresql
 
 * [Postgres.app](http://postgresapp.com/)
@@ -238,8 +260,14 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 #### Rails
 
+Here are commands I've used in getting started on a rails project setup. Don't run unless you understand them.
+
+* `gem install bundler`
+* `bundle install`
 * `gem install rails`
 * [Official Getting Started Guide](http://guides.rubyonrails.org/getting_started.html)
+* `bin/setup`
+* `bundle exec rake db:create db:schema:load`
 
 [Back to TOC](#table-of-contents)
 
