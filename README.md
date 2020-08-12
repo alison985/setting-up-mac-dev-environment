@@ -31,7 +31,7 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * Dropbox
 * Sublime Text 3
 * You're logged in as an administrative user of the computer.
-* You want Python 2.7.x
+* You want Python 2.7.x (2.7 is end of life, upgrade to 3!)
 * You have a VPN already
 
 ## Basic Configuration
@@ -280,21 +280,20 @@ Here are commands I've used in getting started on a rails project setup. Don't r
 * [Toggl](https://support.toggl.com/toggl-on-my-desktop/)
 * [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
  * [1Password Extensions](https://agilebits.com/onepassword/extensions)
- * [Amazon Assistant for Chrome](https://chrome.google.com/webstore/detail/amazon-assistant-for-chro/pbjikboenpfhbbejgkoklgkhjpfogcam)
  * [Cookies](https://chrome.google.com/webstore/detail/cookies/iphcomljdfghbkdcfndaijbokpgddeno)
- * [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
  * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
  * [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
  * [Pin It Button](https://chrome.google.com/webstore/detail/pin-it-button/gpdjojdkbbmdfjfahjcgigfpmkopogic)
  * [ColorZilla](https://chrome.google.com/webstore/detail/bhlhnicpbhignbdhedgjhgdocnmhomnp)
  * [Save to Pocket](https://chrome.google.com/webstore/detail/niloccemoadcdkdjlinkgdfekeahmflj)
- * [Shortcuts for Google](https://chrome.google.com/webstore/detail/baohinapilmkigilbbbcccncoljkdpnd)
 * [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/desktop/)
  * [1Password Extenions](https://agilebits.com/onepassword/extensions)
 * [Slack](https://slack.com/)
 * Download from App Store with Licenses
  * 1Password
- * Omnigraffle
+ * Moom
+ * Paste
+ * Navicat
 * Toggl
 
 [Back to TOC](#table-of-contents)
