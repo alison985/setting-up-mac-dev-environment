@@ -18,12 +18,9 @@ Everytime I get a new computer I have this problem. Here's my documentation.
   * [Python Web Frameworks](#python-web-frameworks)
     * [Flask](#flask)
     * [Django](#django)
-* [Ruby Specific Environment](#ruby-specific-environment)
-  * [Gems](#gems)
-  * [Ruby Web Frameworks](#ruby-web-frameworks)
-    * [Rails](#rails)
 * [Docker](#docker)
 * [Other Helpful Tools](#other-helpful-tools)
+* [Out of Date](#out-of-date-2021)
 
 ## Assumptions
 
@@ -36,7 +33,6 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 
 ## Basic Configuration
 
-* Start the Xcode download/updates first through the App Store. This takes awhile.
 * [Github for Mac](https://mac.github.com/)  [ [Source](http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/) ]
 
 * Unhide Library Folder
@@ -91,18 +87,11 @@ source /usr/local/bin/virtualenvwrapper.sh
   * `xcode-select --install`
   * Will prompt for full version of Xcode or just command line tools
 
-* mergetool/difftool
-  * [Kaleidoscope](http://www.kaleidoscopeapp.com/)
-  * Other options: 
-    * [Diff Tools on Mac OS X Blog Entry](http://www.git-tower.com/blog/diff-tools-mac/) 
-    * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
-
 [Back to TOC](#table-of-contents)
 
 ## Mac OS Configuration
 
 * Change background of login screen [Lifehacker article](http://lifehacker.com/customize-the-login-screen-on-os-x-yosemite-1683740565)
-
   If you're running Yosemite, all you need to do is save your desired image as: /Library/Caches/com.apple.desktop.admin.png.
 
 ## Package Managers
@@ -113,6 +102,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 * [PIP](https://pip.pypa.io/en/latest/installing.html)
 
    ```sudo easy_install pip```
+   
 * [Sublime Text 3 Package Control](https://packagecontrol.io/installation) `View > Show Console`
 
 ```bash
@@ -124,13 +114,28 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 * [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 * [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
 * [PostgreSQL Syntax Highlighting](https://packagecontrol.io/packages/PostgreSQL%20Syntax%20Highlighting)
-* [Djaneiro](https://github.com/squ1b3r/Djaneiro)
 * [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter)
-* [HTML-CSS-JS Prettify](https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify)
-* [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
-* [Bootstrap 3 Snippets](https://packagecontrol.io/packages/Bootstrap%203%20Snippets)
-* RegReplace
-* Sublime Text 3 Only
+* Bootstrap 4 Snippets
+* Gitgutter
+  - In Preference > Settings > user file add
+```
+{
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "b4",
+			"selector": "text.html"
+		}
+	],
+	"font_size": 15,
+	"ignored_packages":
+	[
+		"Vintage"
+	]
+}
+```
+
+Sublime Text 3 Only
 * [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements)
 
 [Back to TOC](#table-of-contents)
@@ -171,7 +176,7 @@ mysql -uroot
 
 ### Virtual Environment
 
-Asssumes the variables for virtualenv listed in the ~/.bash_profile above.
+Asssumes the variables for virtualenv listed in the ~/.bash_profile above. Uses virtualenvwrapper to - you guessed it - wrap virtualenv.
 
 ```bash
 pip install virtualenv
@@ -185,8 +190,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 * `mkvirtualenv venv`
 * `workon venv`
 
-### Python Sublime Packages
-
+### Sublime Python Packages
 * [Jedi - python autocompletion](https://packagecontrol.io/packages/Jedi%20-%20Python%20autocompletion)
 
 ### Python Libraries
@@ -222,7 +226,44 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 [Back to TOC](#table-of-contents)
 
-## Ruby Specific Environment
+## Docker
+
+* Download stable package from [https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/) and install.
+
+## Other Helpful Tools
+
+* [Toggl](https://support.toggl.com/toggl-on-my-desktop/)
+* [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/desktop/)
+ * Set Default Search to bing.com 
+ * [1Password Extenions](https://agilebits.com/onepassword/extensions)
+ * [EFF Plugin Home](https://www.eff.org/pages/tools) - HTTPS Everywhere, etc.
+ * Find other [Firefox Addons](https://addons.mozilla.org/en-US/firefox/extensions/)
+* [Slack](https://slack.com/)
+* Download from App Store with Licenses
+ * 1Password
+ * Moom
+ * Paste or [non-Mac Store](https://pasteapp.io/)
+ * Navicat
+
+[Back to TOC](#table-of-contents)
+
+## Out-of-Date 2021
+### Dev
+* Start the Xcode download/updates first through the App Store. This takes awhile. (you can download only the part you need with the CLI command above.)
+
+Sublime Packages - Optional/Don't Use in 2021
+* RegReplace
+* [HTML-CSS-JS Prettify](https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify)
+* [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
+* [Bootstrap 3 Snippets](https://packagecontrol.io/packages/Bootstrap%203%20Snippets)
+
+* mergetool/difftool
+  * [Kaleidoscope](http://www.kaleidoscopeapp.com/)
+  * Other options: 
+    * [Diff Tools on Mac OS X Blog Entry](http://www.git-tower.com/blog/diff-tools-mac/) 
+    * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
+ 
+## Ruby Specific Environment - Out-of-Date
 
 ### Ruby Version Manager (RVM)
 
@@ -270,30 +311,14 @@ Here are commands I've used in getting started on a rails project setup. Don't r
 * `bundle exec rake db:create db:schema:load`
 
 [Back to TOC](#table-of-contents)
-
-## Docker
-
-* Download stable package from [https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/) and install.
-
-## Other Helpful Tools
-
-* [Toggl](https://support.toggl.com/toggl-on-my-desktop/)
-* [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
- * [1Password Extensions](https://agilebits.com/onepassword/extensions)
- * [Cookies](https://chrome.google.com/webstore/detail/cookies/iphcomljdfghbkdcfndaijbokpgddeno)
- * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
- * [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
- * [Pin It Button](https://chrome.google.com/webstore/detail/pin-it-button/gpdjojdkbbmdfjfahjcgigfpmkopogic)
- * [ColorZilla](https://chrome.google.com/webstore/detail/bhlhnicpbhignbdhedgjhgdocnmhomnp)
- * [Save to Pocket](https://chrome.google.com/webstore/detail/niloccemoadcdkdjlinkgdfekeahmflj)
-* [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/desktop/)
- * [1Password Extenions](https://agilebits.com/onepassword/extensions)
-* [Slack](https://slack.com/)
-* Download from App Store with Licenses
- * 1Password
- * Moom
- * Paste
- * Navicat
-* Toggl
-
-[Back to TOC](#table-of-contents)
+ 
+ ### Other
+ 
+ * [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+   * [1Password Extensions](https://agilebits.com/onepassword/extensions)
+   * [Cookies](https://chrome.google.com/webstore/detail/cookies/iphcomljdfghbkdcfndaijbokpgddeno)
+   * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
+   * [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
+   * [Pin It Button](https://chrome.google.com/webstore/detail/pin-it-button/gpdjojdkbbmdfjfahjcgigfpmkopogic)
+   * [ColorZilla](https://chrome.google.com/webstore/detail/bhlhnicpbhignbdhedgjhgdocnmhomnp)
+   * [Save to Pocket](https://chrome.google.com/webstore/detail/niloccemoadcdkdjlinkgdfekeahmflj)
