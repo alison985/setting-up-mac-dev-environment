@@ -237,6 +237,7 @@ source /usr/local/bin/virtualenvwrapper.sh
  * Set Default Search to bing.com 
  * [1Password Extenions](https://agilebits.com/onepassword/extensions)
  * [EFF Plugin Home](https://www.eff.org/pages/tools) - HTTPS Everywhere, etc.
+ * [Wayback Machine Extension](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/)
  * Find other [Firefox Addons](https://addons.mozilla.org/en-US/firefox/extensions/)
 * [Slack](https://slack.com/)
 * Download from App Store with Licenses
