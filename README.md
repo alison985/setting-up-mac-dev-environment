@@ -7,17 +7,17 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * [Basic Configuration](#basic-configuration)
 * [Mac OS Configuration](#mac-os)
 * [Package Managers](#package-managers)
-  * [Default Sublime Packages](#default-sublime-packages)
+    * [Default Sublime Packages](#default-sublime-packages)
 * [Local Databases](#local-databases)
-  * [mySQL](#mysql)
-  * [PostgreSQL](#postgresql)
+    * [mySQL](#mysql)
+    * [PostgreSQL](#postgresql)
 * [Python Specific Environment](#python-specific-environment)
-  * [Virtual Environment](#virtual-environment)
-  * [Python Sublime Packages](#python-sublime-packages)
-  * [Python Libraries](#python-libraries)
-  * [Python Web Frameworks](#python-web-frameworks)
-    * [Flask](#flask)
-    * [Django](#django)
+    * [Virtual Environment](#virtual-environment)
+    * [Python Sublime Packages](#python-sublime-packages)
+    * [Python Libraries](#python-libraries)
+    * [Python Web Frameworks](#python-web-frameworks)
+        * [Flask](#flask)
+        * [Django](#django)
 * [Docker](#docker)
 * [Other Helpful Tools](#other-helpful-tools)
 * [Out of Date](#out-of-date-2021)
@@ -32,14 +32,11 @@ Everytime I get a new computer I have this problem. Here's my documentation.
 * You have a VPN already
 
 ## Basic Configuration
-
 * [Github for Mac](https://mac.github.com/)  [ [Source](http://hackercodex.com/guide/mac-osx-mavericks-10.9-configuration/) ]
-
 * Unhide Library Folder
-  * Open Finder.
-  * Press `shift-command-H` and then `command-J`, which will bring up a window that configures Finder view options.
-  * Check the “Show Library Folder” and close the window.
-
+    * Open Finder.
+    * Press `shift-command-H` and then `command-J`, which will bring up a window that configures Finder view options.
+    * Check the “Show Library Folder” and close the window.
 * Bash Profile Setup
   * `vim ~/.bash_profile`
 
@@ -80,12 +77,11 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTULENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 ```
-
-  * `source ~/.bash_profile`
+    * `source ~/.bash_profile`
 
 * Get the XCode pieces you need
-  * `xcode-select --install`
-  * Will prompt for full version of Xcode or just command line tools
+    * `xcode-select --install`
+    * Will prompt for full version of Xcode or just command line tools
 
 [Back to TOC](#table-of-contents)
 
@@ -95,14 +91,10 @@ source /usr/local/bin/virtualenvwrapper.sh
   If you're running Yosemite, all you need to do is save your desired image as: /Library/Caches/com.apple.desktop.admin.png.
 
 ## Package Managers
-
 * [Homebrew](http://brew.sh/)
-
    ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
 * [PIP](https://pip.pypa.io/en/latest/installing.html)
-
    ```sudo easy_install pip```
-   
 * [Sublime Text 3 Package Control](https://packagecontrol.io/installation) `View > Show Console`
 
 ```bash
@@ -110,14 +102,13 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 ```
 
 ### Default Sublime Packages
-
 * [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 * [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
 * [PostgreSQL Syntax Highlighting](https://packagecontrol.io/packages/PostgreSQL%20Syntax%20Highlighting)
 * [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter)
 * Bootstrap 4 Snippets
 * Gitgutter
-  - In Preference > Settings > user file add
+    - In Preference > Settings > user file add
 ```
 {
 	"auto_complete_triggers":
@@ -204,24 +195,24 @@ source /usr/local/bin/virtualenvwrapper.sh
 #### Flask
 
 * Flask 
-  * `pip install Flask`
-  * [Flask Homepage](http://flask.pocoo.org/)
+    * `pip install Flask`
+    * [Flask Homepage](http://flask.pocoo.org/)
 * Flask-bootstrap
-  * `pip install flask-bootstrap`
-  * [Flask-Bootstrap Homepage](http://pythonhosted.org/Flask-Bootstrap/)
+    * `pip install flask-bootstrap`
+    * [Flask-Bootstrap Homepage](http://pythonhosted.org/Flask-Bootstrap/)
 * cookiecutter-flask (Comes with FontAwesome 4)
-  * `pip install cookiecutter-flask`
-  * `cookiecutter https://github.com/sloria/cookiecutter-flask.git`
-  * [cookiecutter-flask homepage](https://github.com/sloria/cookiecutter-flask)
+    * `pip install cookiecutter-flask`
+    * `cookiecutter https://github.com/sloria/cookiecutter-flask.git`
+    * [cookiecutter-flask homepage](https://github.com/sloria/cookiecutter-flask)
 
 #### Django
 
 * `pip install django`
 * Sublime Plugins
-  * [Djaneiro](https://packagecontrol.io/packages/Djaneiro)
+    * [Djaneiro](https://packagecontrol.io/packages/Djaneiro)
 * Django Plugins
-  * [Django Bootstrap 3](https://github.com/dyve/django-bootstrap3)
-  * [django-fontawesome](https://pypi.python.org/pypi/django-fontawesome)
+    * [Django Bootstrap 3](https://github.com/dyve/django-bootstrap3)
+    * [django-fontawesome](https://pypi.python.org/pypi/django-fontawesome)
 * [Official First Django App Tutorial](https://docs.djangoproject.com/en/1.8/intro/tutorial01/)
 
 [Back to TOC](#table-of-contents)
@@ -234,17 +225,17 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 * [Toggl](https://support.toggl.com/toggl-on-my-desktop/)
 * [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/desktop/)
- * Set Default Search to bing.com 
- * [1Password Extenions](https://agilebits.com/onepassword/extensions)
- * [EFF Plugin Home](https://www.eff.org/pages/tools) - HTTPS Everywhere, etc.
- * [Wayback Machine Extension](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/)
- * Find other [Firefox Addons](https://addons.mozilla.org/en-US/firefox/extensions/)
+    * Set Default Search to bing.com 
+    * [1Password Extenions](https://agilebits.com/onepassword/extensions)
+    * [EFF Plugin Home](https://www.eff.org/pages/tools) - HTTPS Everywhere, etc.
+    * [Wayback Machine Extension](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/)
+    * Find other [Firefox Addons](https://addons.mozilla.org/en-US/firefox/extensions/)
 * [Slack](https://slack.com/)
 * Download from App Store with Licenses
- * 1Password
- * Moom
- * Paste or [non-Mac Store](https://pasteapp.io/)
- * Navicat
+    * 1Password
+    * Moom
+    * Paste or [non-Mac Store](https://pasteapp.io/)
+    * Navicat
 
 [Back to TOC](#table-of-contents)
 
@@ -259,10 +250,10 @@ Sublime Packages - Optional/Don't Use in 2021
 * [Bootstrap 3 Snippets](https://packagecontrol.io/packages/Bootstrap%203%20Snippets)
 
 * mergetool/difftool
-  * [Kaleidoscope](http://www.kaleidoscopeapp.com/)
-  * Other options: 
-    * [Diff Tools on Mac OS X Blog Entry](http://www.git-tower.com/blog/diff-tools-mac/) 
-    * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
+    * [Kaleidoscope](http://www.kaleidoscopeapp.com/)
+    * Other options: 
+      * [Diff Tools on Mac OS X Blog Entry](http://www.git-tower.com/blog/diff-tools-mac/) 
+      * [Meld](http://meldmerge.org/) through [MacPorts](https://www.macports.org/install.php)
  
 ## Ruby Specific Environment - Out-of-Date
 
@@ -270,23 +261,23 @@ Sublime Packages - Optional/Don't Use in 2021
 
 * You may need to `brew install gnupg gnupg2` first so the gpg key can be installed.
 * To solve the errors from this: 
-  * `sudo chown -R $(whoami) /usr/local/lib`
-  * `brew link libgpg-error`
-  * `brew link libassuan`
-  * `brew link libgcrypt`
-  * `brew link libksba`
-  * `brew link libusb`
-  * `brew link libusb-compat`
-  * `brew link pth`
+    * `sudo chown -R $(whoami) /usr/local/lib`
+    * `brew link libgpg-error`
+    * `brew link libassuan`
+    * `brew link libgcrypt`
+    * `brew link libksba`
+    * `brew link libusb`
+    * `brew link libusb-compat`
+    * `brew link pth`
 * `brew doctor` can be helpful as well.
 
 * Install
-  * `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
-  * `\curl -sSL https://get.rvm.io | bash -s stable`
-  * `source /Users/{username}/.rvm/scripts/rvm` (replace {username})
-  * `rvm install 2.2.4` (or latest stable release version on this page [Ruby](https://www.ruby-lang.org/en/))
-  * `rvm use 2.2.4`
-  * You may also want `ruby -v` or `which ruby`.
+    * `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
+    * `\curl -sSL https://get.rvm.io | bash -s stable`
+    * `source /Users/{username}/.rvm/scripts/rvm` (replace {username})
+    * `rvm install 2.2.4` (or latest stable release version on this page [Ruby](https://www.ruby-lang.org/en/))
+    * `rvm use 2.2.4`
+    * You may also want `ruby -v` or `which ruby`.
 * Link to [RVM](https://rvm.io/) for niceness sake, but avoid reading their docs at all costs. They are **horrible**.
 
 ### Gems
@@ -313,9 +304,9 @@ Here are commands I've used in getting started on a rails project setup. Don't r
 
 [Back to TOC](#table-of-contents)
  
- ### Other
+### Other
  
- * [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+* [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
    * [1Password Extensions](https://agilebits.com/onepassword/extensions)
    * [Cookies](https://chrome.google.com/webstore/detail/cookies/iphcomljdfghbkdcfndaijbokpgddeno)
    * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
