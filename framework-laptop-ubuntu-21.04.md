@@ -1,19 +1,21 @@
-## Opinions on Ordering a Laptop
-1. You do NOT want vPro in your Wifi.
+## Opinions on Ordering a (Framework) Laptop
+1. You do NOT want vPro in your Wifi chip. It also remote machine takeover. Was designed for corporations to have access to employee laptops.
 
-## Overview of Opinions
-* De-google, de-apple yourself.
-* 
+## Overview of Repo Creator's Opinions
+* De-google, de-apple, de-monopolize yourself.
+* :The more you know: about computers the better off you will be. 
+* Ubuntu with Gnome GUI is very equivalent to a Windows or Mac computer at this point. The graphics are just not as sleek and you have more control and freedom. 
 
 ## Current Assumptions
-1. By default (these assumptions are based on Ubuntu 21.04, Oct 2021)
+1. This set of assumptions are based on Ubuntu 21.04, Oct 2021. By default: 
     * Some level of Wi-fi works
     * Firefox is installed
     * External Monitor plug-in work
     * Connecting a printer works
     * LibreOffice is installed
-1. You want a computer mirroring Alison's setup. Hence, mix-and-match as desired - please just understand the risks or investigate further or ask a friend/internet.
-1. These instructions will get out of date relatively quickly.
+1. You want a computer mirroring Alison's setup. Hence, mix-and-match as desired. Use at your own risk as the GNU GPLv2 license says.
+1. You will need/have a USB key (portable USB) that is at least 4 GB large. In order to make an Ubuntu bootable USB so you can install the OS you have to _delete_ everything on it... pick a USB key to use accordingly.
+1. These instructions will get out of date from Oct. 2021 relatively quickly.
 
 ## Default Install
 
@@ -73,11 +75,11 @@ These are available to install via Ubuntu Software.
 1. Install video proprietary things (link pending)
 1. Figure out best Screenshots with ease of Mac keyboard shortcuts. Default Screenshot app is too time consuming.
 1. Figure out best Note Taking Program
-    * (Joplin task lists as of Oct 2021 are "buggy" for my personal workflow)
+    * (Joplin Markdown and Preview mode task lists as of Oct 2021 are "buggy" for my personal workflow)
     * View [latest note-taking recommendations on Slant](https://www.slant.co/topics/6303/viewpoints/21/~note-taking-apps-for-linux~qownnotes)
-1. Figure out best Password sharing/saving
-1. Figure out best [ PENDING - Can't figure out how not to have vault put online ] In Ubuntu Software, install 1Password.
-1. Figure out if I can have a shortcut to put computer to sleep
+1. Figure out best Password sharing/random creation/saving
+    * [ PENDING - Can't figure out how not to have vault put online ] In Ubuntu Software, install 1Password.
+1. Figure out if I can have a shortcut to put computer to sleep like my mac hot corner.
 1. Ensure connection with Gitlab
 
 
