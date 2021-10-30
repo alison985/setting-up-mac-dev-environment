@@ -1,7 +1,22 @@
+# Repo History
+Everytime I, Alison, get a new computer I forget a step in the setup process. Here's my documentation.
+
+## Notes 
+
+* I've expanded this repo into other computer OSes and general tech stack environments so I have all I need in one place. 
+    * Mac OS - This readme.md document
+    * [AWS](aws.md)
+    * [Ubuntu in General](ubuntu.md) - will probably merge into Framework Ubuntu page
+    * [Ubuntu 21.04 on my Framework Labtop](framework-laptop-ubuntu-21.04.md)
+* This repository started as "How to Setup a Mac Development Environment" because I was buying, or setting up for others, Macintoshs. I will not be changing the name of the repo at this time to assist in keeping it findable for others.
+* This Gitlab version is the canonical version. This [repository moved from my Github.com](https://github.com/alison985/setting-up-mac-dev-environment) account. It had 8 stars and 2 forks when I moved it. :proud of ability to help people: 
+    * It was moved specifically because Github would not cancel their ICE contract. The Immigration and Customs Enforcement agency was created in March 2003. 
+    * This repository acknowledges non-Indigious people in the United States live on stolen land and that the United States has continually broken treaties with First Peoples/Native Americans/Indigeous North American peoples. Please [learn about the tribes](https://native-land.ca/) that were where you reside long before you. [Support water protectors](https://waterprotectorlegal.org/). Water is life.
+* This is licensed under GNU GPLv2. [Read what that means](https://choosealicense.com/licenses/gpl-2.0/)
+
+
 # How To Setup a Mac Development Environment (from scratch)
-
-Everytime I get a new computer I have this problem. Here's my documentation.
-
+Should be considered out-of-date but still relevant overall.
 ## Table of Contents
 * [Assumptions](#assumptions)
 * [Basic Configuration](#basic-configuration)
