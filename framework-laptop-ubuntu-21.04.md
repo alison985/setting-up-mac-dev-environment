@@ -4,6 +4,7 @@
 ## Overview of Repo Creator's Opinions
 * De-google, de-apple, de-monopolize yourself.
 * :The more you know: about computers the better off you will be. 
+* Notes App and To Do app should be in the same app.
 * Ubuntu with Gnome GUI is very equivalent to a Windows or Mac computer at this point. The graphics are just not as sleek and you have more control and freedom. 
 
 ## Current Assumptions
@@ -66,8 +67,8 @@ These are available to install via Ubuntu Software.
 1. Setup a guest account
 
 ## Apps Alison Tried And didn't like
-* Notes App
-* Taskbook
+* Notes App (default install)
+* Taskbook (installed myself)
 
 
 ## TODO
@@ -76,11 +77,15 @@ These are available to install via Ubuntu Software.
 1. Figure out best Screenshots with ease of Mac keyboard shortcuts. Default Screenshot app is too time consuming.
 1. Figure out best Note Taking Program
     * (Joplin Markdown and Preview mode task lists as of Oct 2021 are "buggy" for my personal workflow)
-    * View [latest note-taking recommendations on Slant](https://www.slant.co/topics/6303/viewpoints/21/~note-taking-apps-for-linux~qownnotes)
+    * View [latest note-taking recommendations on Slant](https://www.slant.co/topics/6303/~note-taking-apps-for-linux)
+        * Trying [QOwnNotes](https://www.qownnotes.org/getting-started/demo.html)
+        * [QOwnNotes Firefox Web Companion](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/)
+        * [QOwnNotes Make Spellcheck Work](https://www.qownnotes.org/editor/spellchecking.html)
 1. Figure out best Password sharing/random creation/saving
     * [ PENDING - Can't figure out how not to have vault put online ] In Ubuntu Software, install 1Password.
 1. Figure out if I can have a shortcut to put computer to sleep like my mac hot corner.
 1. Ensure connection with Gitlab
+1. Think through NextCloud
 
 
 ## Issues Run Into So Far
