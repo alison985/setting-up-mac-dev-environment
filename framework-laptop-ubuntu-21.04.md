@@ -1,4 +1,3 @@
-
 ## Repo Creator's Opinions
 
 * When ordering a computer you do NOT want vPro in your Wifi chip. From what I read it has a remote machine takeover. Was designed for corporations to have access to employee laptops.
@@ -52,10 +51,13 @@
     * Slack
     * Zoom
     * Calculator
-    * Note-taking App
+    * Your note-taking app of choice
 1. Tweak setting on how long to wait before sleeping (1 minute is too short)
 1. Browser bookmark creations and/or import
 1. Login to Firefox if desired. Provides portability for browser data between machines
+
+## Things To Make It Really Work That You find along the way
+* Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
 
 ## Generally Recommended Apps to Install on Linux
 These are available to install via Ubuntu Software.
@@ -78,7 +80,6 @@ These are available to install via Ubuntu Software.
 
 ## TODO
 
-1. Install video proprietary things (link pending)
 1. Figure out best Screenshots with ease of Mac keyboard shortcuts. Default Screenshot app is too time consuming.
 1. Figure out best Note Taking Program
     * (Joplin Markdown and Preview mode task lists as of Oct 2021 are "buggy" for my personal workflow)
@@ -87,15 +88,16 @@ These are available to install via Ubuntu Software.
         * [QOwnNotes Firefox Web Companion](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/)
         * [QOwnNotes Make Spellcheck Work](https://www.qownnotes.org/editor/spellchecking.html)
 1. Figure out best Password sharing/random creation/saving
-    * [ PENDING - Can't figure out how not to have vault put online ] In Ubuntu Software, install 1Password.
+    * [ PENDING - Can't figure out how not to have 1Password vault put online ] In Ubuntu Software, install 1Password.
+    * Currently using built-in Firefox feature. will transfer across devices but un/pw fields only.
 1. Figure out if I can have a shortcut to put computer to sleep like my mac hot corner.
 1. Ensure connection with Gitlab
 1. Think through NextCloud
 
 
-## Issues Run Into So Far
+### Issues Run Into So Far
 1. On opening Slack, sometimes it will prompt you to force quit or wait. I recommend logging out of any unused Slacks in the app (you can always use them in the browser as relevant) and clicking Wait. 
-1. Zoom usage has something not ice going on. For instance, it can make not even copy and paste work
+1. Zoom usage has something not nice going on. For instance, it can make not even copy and paste work. Framework community posts about optimizations may help.
 
 
 
