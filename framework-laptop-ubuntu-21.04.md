@@ -32,10 +32,6 @@
 
 ## Install Minimum Programs
 
-1. In terminal
-    - Add _apt user. https://askubuntu.com/q/771936 
-    - Install Zoom. See https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_adcc0b66-b2f4-468b-bc7a-12c182f354b7
-1. Docker Desktop
 1. Slack
 1. Install [Privacy Badger Extension](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) to Firefox
 
@@ -49,7 +45,6 @@
     * Firefox (should be by default)
     * Files (should be by default)
     * Slack
-    * Zoom
     * Calculator
     * Your note-taking app of choice
 1. Tweak setting on how long to wait before sleeping (1 minute is too short)
@@ -60,44 +55,47 @@
 * Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
 
 ## Generally Recommended Apps to Install on Linux
-These are available to install via Ubuntu Software.
 
+### Install via Ubuntu Software.
 1. Audacity (audio)
 1. VLC (video)
 1. Inkscape (vector art)
 1. Calibre (e-book library management)
+1. GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
+
+### Install via Terminal
+1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
 
 ## Takes Time but worth doing
 
 1. Setup addiitonal permissions groups
 1. Setup a guest account
 
-## Apps Alison Tried And didn't like
-
-* Notes App (default install)
-* Taskbook (installed myself)
-
-
 ## TODO
 
-1. Figure out best Screenshots with ease of Mac keyboard shortcuts. Default Screenshot app is too time consuming.
+1. Figure out best Screenshots with ease of Mac keyboard shortcuts. Default Screenshot app is too time consuming. Fast research pass hasn't found a good answer.
 1. Figure out best Note Taking Program
     * (Joplin Markdown and Preview mode task lists as of Oct 2021 are "buggy" for my personal workflow)
     * View [latest note-taking recommendations on Slant](https://www.slant.co/topics/6303/~note-taking-apps-for-linux)
         * Trying [QOwnNotes](https://www.qownnotes.org/getting-started/demo.html)
-        * [QOwnNotes Firefox Web Companion](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/)
-        * [QOwnNotes Make Spellcheck Work](https://www.qownnotes.org/editor/spellchecking.html)
+            * RECOMMEND AGAINST. [QOwnNotes Firefox Web Companion](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/) Breaks copy/paste from Firefox. Makes a new note for each copy/paste instead of including in current note. I didn't figure out a way to do image inclusion with it. 
+            * [QOwnNotes Make Spellcheck Work](https://www.qownnotes.org/editor/spellchecking.html)
 1. Figure out best Password sharing/random creation/saving
     * [ PENDING - Can't figure out how not to have 1Password vault put online ] In Ubuntu Software, install 1Password.
-    * Currently using built-in Firefox feature. will transfer across devices but un/pw fields only.
+    * Currently using built-in Firefox feature. will transfer across devices but un/pw fields only without notes.
 1. Figure out if I can have a shortcut to put computer to sleep like my mac hot corner.
-1. Ensure connection with Gitlab
-1. Think through NextCloud
+1. Ensure connection with Gitlab [ PENDING - time to setup in Github Desktop for Linux ]
 
+## Apps Alison Tried And decided against
 
-### Issues Run Into So Far
-1. On opening Slack, sometimes it will prompt you to force quit or wait. I recommend logging out of any unused Slacks in the app (you can always use them in the browser as relevant) and clicking Wait. 
-1. Zoom usage has something not nice going on. For instance, it can make not even copy and paste work. Framework community posts about optimizations may help.
+* RECOMMEND AGAINST - Zoom  
+* Notes App (default install)
+* Taskbook (installed myself)
+* NextCloud. Based on r/nextcloud it seems like a lot of work(overhead) to run yourself for my particular needs right now.
+
+## Issues Run Into So Far
+1. On opening Slack (and other programs), sometimes it will prompt you to force quit or wait. I recommend logging out of any unused Slacks in the app (you can always use them in the browser as relevant) and clicking Wait. 
+1. Zoom usage has something not nice going on. For instance, it can make not even copy and paste work. Framework community posts about optimizations may help. I have recerted to using my old Mac laptop for Zoom usage because it's just too painful.
 
 
 
