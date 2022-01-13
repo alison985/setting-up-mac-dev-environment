@@ -3,7 +3,7 @@
 * When ordering a computer you do NOT want vPro in your Wifi chip. From what I read it has a remote machine takeover. Was designed for corporations to have access to employee laptops.
 * De-google, de-apple, de-monopolize yourself.
 * :The more you know: about computers the better off you will be. 
-* Notes App and To Do app should be in the same app.
+* --Notes App and To Do app should be in the same app.--
 * Ubuntu with Gnome GUI is very equivalent to a Windows or Mac computer at this point(Oct 2021). The graphics are just not as sleek and you have more control and freedom. 
 
 ## Current Assumptions
@@ -16,6 +16,9 @@
 1. You want a computer mirroring Alison's setup. Mix-and-match as desired. Use at your own risk as the GNU GPLv2 license says.
 1. You will need a USB key (portable USB) that is at least 4 GB large. This will allow you to make an Ubuntu bootable USB so you can install the OS on your new machine. PLEASE BE AWARE you have to _DELETE_ everything on it in order to do this*... pick a USB key to use accordingly.
 1. These instructions will get out of date from Oct. 2021 relatively quickly.
+
+## Remember
+`Shift+Cnl+C` or `+V` to copy and paste into terminal.
 
 ## Default Install
 
@@ -65,6 +68,7 @@
 
 ### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
+1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
 
 ## Takes Time but worth doing
 
