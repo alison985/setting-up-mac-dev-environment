@@ -69,6 +69,10 @@
 ### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
 1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
+1. Vim if not already installed.
+
+### Possible installs
+1. Zoom - note if Zoom is running it's about the only thing you can use at the time. Good install as a back-up for times you can get a second device online.
 
 ## Takes Time but worth doing
 
@@ -82,17 +86,18 @@
     * (Joplin Markdown and Preview mode task lists as of Oct 2021 are "buggy" for my personal workflow)
     * View [latest note-taking recommendations on Slant](https://www.slant.co/topics/6303/~note-taking-apps-for-linux)
         * Trying [QOwnNotes](https://www.qownnotes.org/getting-started/demo.html)
-            * RECOMMEND AGAINST. [QOwnNotes Firefox Web Companion](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/) Breaks copy/paste from Firefox. Makes a new note for each copy/paste instead of including in current note. I didn't figure out a way to do image inclusion with it. 
+            * RECOMMEND AGAINST the related [QOwnNotes Firefox Web Companion](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/) Breaks copy/paste from Firefox. Makes a new note for each copy/paste instead of including in current note. I didn't figure out a way to do image inclusion with it. 
             * [QOwnNotes Make Spellcheck Work](https://www.qownnotes.org/editor/spellchecking.html)
 1. Figure out best Password sharing/random creation/saving
     * [ PENDING - Can't figure out how not to have 1Password vault put online ] In Ubuntu Software, install 1Password.
     * Currently using built-in Firefox feature. will transfer across devices but un/pw fields only without notes.
 1. Figure out if I can have a shortcut to put computer to sleep like my mac hot corner.
-1. Ensure connection with Gitlab [ PENDING - time to setup in Github Desktop for Linux ]
+1. Ensure connection with Gitlab. 
+    * Does need key to gitlab created.
+    * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
 
 ## Apps Alison Tried And decided against
 
-* RECOMMEND AGAINST - Zoom  
 * Notes App (default install)
 * Taskbook (installed myself)
 * NextCloud. Based on r/nextcloud it seems like a lot of work(overhead) to run yourself for my particular needs right now.
