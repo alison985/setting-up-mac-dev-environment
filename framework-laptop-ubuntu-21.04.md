@@ -70,9 +70,21 @@
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
 1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
 1. Vim if not already installed.
+1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
+```bash
+sudo add-apt-repository ppa:mozillacorp/mozillavpn
+sudo apt-get update
+sudo apt-get install mozillavpn
+mozillavpn # turn on
+```
+Login via web browser to Firefox account.
 
 ### Possible installs
 1. Zoom - note if Zoom is running it's about the only thing you can use at the time. Good install as a back-up for times you can get a second device online.
+1. Ensure connection with Gitlab. 
+    * Does need key to gitlab created.
+    * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
+1. Thunderbird and/or Evolution for email Client.
 
 ## Takes Time but worth doing
 
@@ -92,9 +104,7 @@
     * [ PENDING - Can't figure out how not to have 1Password vault put online ] In Ubuntu Software, install 1Password.
     * Currently using built-in Firefox feature. will transfer across devices but un/pw fields only without notes.
 1. Figure out if I can have a shortcut to put computer to sleep like my mac hot corner.
-1. Ensure connection with Gitlab. 
-    * Does need key to gitlab created.
-    * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
+
 
 ## Apps Alison Tried And decided against
 
