@@ -56,6 +56,8 @@
 
 ## Things To Make It Really Work That You find along the way
 * Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
+* Audacity needs a file change to give it a permission. It prompts you with instructions in a modal on start-up. The Blue microphone worked after doing this. I also had to put the sample rate at 192kb in audacity to avoid error messages.
+* See also anything in the [current summary of install steps from the frame.work 21.04 install thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722).
 
 ## Generally Recommended Apps to Install on Linux
 
@@ -84,7 +86,7 @@ Login via web browser to Firefox account.
 1. Ensure connection with Gitlab. 
     * Does need key to gitlab created.
     * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
-1. Thunderbird and/or Evolution for email Client.
+1. Evolution for email Client.
 
 ## Takes Time but worth doing
 
