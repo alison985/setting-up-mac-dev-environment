@@ -86,7 +86,23 @@ Login via web browser to Firefox account.
 1. Ensure connection with Gitlab. 
     * Does need key to gitlab created.
     * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
-1. Evolution for email Client.
+1. Evolution for email Client via Ubuntu software.
+1. Text-to-speech, especially for ePub. 
+    * Install voice synthesizer and a nice voice. From [askubuntu.com answer](https://askubuntu.com/a/908889)
+    ```bash
+    sudo apt-get install festival
+    sudo apt-get install festvox-us-slt-hts
+    festival -i
+    festival> (voice_cmu_us_slt_arctic_hts) 
+    festival> (SayText "Don't hate me, I'm just doing my job!")
+    ```
+    * Set the nice voice as default voice in `/etc/festival.scm` using [these instructions](https://ubuntuforums.org/showthread.php?t=751169). 
+    * [Install Flatpak](https://flatpak.org/setup/Ubuntu) so you can install Foliate via Flatpak [not via snap](https://github.com/johnfactotum/foliate/wiki#how-to-use-text-to-speech).
+    * Restart
+    * [Install Foliate via flatpak](https://flathub.org/apps/details/com.github.johnfactotum.Foliate). Foliate is an ePUB viewer that lets you add annotations and more control over which voice to do TTS reading in.
+    ```bash
+    flatpak install flathub com.github.johnfactotum.Foliate
+    ```  
 
 ## Takes Time but worth doing
 
@@ -116,7 +132,7 @@ Login via web browser to Firefox account.
 
 ## Issues Run Into So Far
 1. On opening Slack (and other programs), sometimes it will prompt you to force quit or wait. I recommend logging out of any unused Slacks in the app (you can always use them in the browser as relevant) and clicking Wait. 
-1. Zoom usage has something not nice going on. For instance, it can make not even copy and paste work. Framework community posts about optimizations may help. I have recerted to using my old Mac laptop for Zoom usage because it's just too painful.
+1. Zoom usage has something not nice going on. For instance, it can make not even copy and paste work. Framework community posts about optimizations may help. I have resorted to using my old Mac laptop for Zoom usage because it's just too painful.
 
 
 
