@@ -96,13 +96,21 @@ Login via web browser to Firefox account.
     festival> (voice_cmu_us_slt_arctic_hts) 
     festival> (SayText "Don't hate me, I'm just doing my job!")
     ```
-    * Set the nice voice as default voice in `/etc/festival.scm` using [these instructions](https://ubuntuforums.org/showthread.php?t=751169). 
+    * Set the nice voice as default voice in `/etc/festival.scm` using [these instructions](https://ubuntuforums.org/showthread.php?t=751169). My file ends up with:
+    ```bash
+    (Parameter.set 'Audio_Command "aplay -q -c 1 -t raw -f s16 -r $SR $FILE")
+    (Parameter.set 'Audio_Method 'Audio_Command)
+    (set! voice_default 'voice_cmu_us_slt_arctic_hts)
+    (set! hts_duration_stretch 0.1)
+    (Parameter.set 'Duration_Stretch 2.5)
+    ```
     * [Install Flatpak](https://flatpak.org/setup/Ubuntu) so you can install Foliate via Flatpak [not via snap](https://github.com/johnfactotum/foliate/wiki#how-to-use-text-to-speech).
     * Restart
     * [Install Foliate via flatpak](https://flathub.org/apps/details/com.github.johnfactotum.Foliate). Foliate is an ePUB viewer that lets you add annotations and more control over which voice to do TTS reading in.
     ```bash
     flatpak install flathub com.github.johnfactotum.Foliate
     ```  
+    * For my own reference: [short ubuntu tts page](http://www.solomonson.com/posts/2010-07-24-ubuntu-linux-text-speech/), [Festival Official Project Page](https://www.cstr.ed.ac.uk/projects/festival/). 
 
 ## Takes Time but worth doing
 
