@@ -17,6 +17,16 @@
 1. You will need a USB key (portable USB) that is at least 4 GB large. This will allow you to make an Ubuntu bootable USB so you can install the OS on your new machine. PLEASE BE AWARE you have to _DELETE_ everything on it in order to do this*... pick a USB key to use accordingly.
 1. These instructions will get out of date from Oct. 2021 relatively quickly.
 
+As of 2022-05-03.
+```bash
+lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 21.10
+Release:	21.10
+Codename:	impish
+```
+
 ## Remember
 `Shift+Cnl+C` or `+V` to copy and paste into terminal.
 
@@ -67,6 +77,7 @@
 1. Inkscape (vector art)
 1. Calibre (e-book library management)
 1. GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
+1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
 
 ### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
