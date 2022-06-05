@@ -3,7 +3,6 @@
 * When ordering a computer you do NOT want vPro in your Wifi chip. From what I read it has a remote machine takeover. Was designed for corporations to have access to employee laptops.
 * De-google, de-apple, de-monopolize yourself.
 * :The more you know: about computers the better off you will be. 
-* --Notes App and To Do app should be in the same app.--
 * Ubuntu with Gnome GUI is very equivalent to a Windows or Mac computer at this point(Oct 2021). The graphics are just not as sleek and you have more control and freedom. 
 
 ## Current Assumptions
@@ -63,6 +62,9 @@ Codename:	impish
     * Calculator
     * Your note-taking app of choice
 1. Tweak setting on how long to wait before sleeping (1 minute is too short)
+    * Settings > Power > Power Saving > Automatic Suspend.
+    * On Battery Power 15 minutes.
+    * On Plugged In 30 minutes.
 
 ## Things To Make It Really Work That You find along the way
 * Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
@@ -85,7 +87,6 @@ Codename:	impish
 ### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
 1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
-1. Vim if not already installed.
 1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
 ```bash
 sudo add-apt-repository ppa:mozillacorp/mozillavpn
@@ -96,11 +97,11 @@ mozillavpn # turn on
 Login via web browser to Firefox account.
 
 ### Possible installs
-1. Zoom - note if Zoom is running it's about the only thing you can use at the time. Good install as a back-up for times you can get a second device online.
+1. Zoom from Software app.
 1. Ensure connection with Gitlab. 
     * Does need key to gitlab created.
     * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
-1. Evolution for email Client via Ubuntu software.
+1. ??Evolution for email Client via Ubuntu software.
 1. Text-to-speech, especially for ePub. 
     * Install voice synthesizer and a nice voice. From [askubuntu.com answer](https://askubuntu.com/a/908889)
     ```bash
@@ -134,7 +135,7 @@ Login via web browser to Firefox account.
 ## TODO
 
 1. Figure out best Screenshots with ease of Mac keyboard shortcuts. Default Screenshot app is too time consuming. Fast research pass hasn't found a good answer.
-1. Figure out best Note Taking Program
+1. Figure out best Note Taking Program. * --Notes App and To Do app should be in the same app.--
     * (Joplin Markdown and Preview mode task lists as of Oct 2021 are "buggy" for my personal workflow)
     * View [latest note-taking recommendations on Slant](https://www.slant.co/topics/6303/~note-taking-apps-for-linux)
         * Trying [QOwnNotes](https://www.qownnotes.org/getting-started/demo.html)
