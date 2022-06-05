@@ -36,17 +36,15 @@ Codename:	impish
     - Install Ubuntu 21.04 (only distribution that works right now (Oct 2021). 
         - Version 20 doesn't have default Wifi)
         - Make sure you're installing this specific Ubuntu version. I had to hunt on the Ubuntu website to find this particular version. 
-    - Install updated Wifi Drivers 
-    - Enable Deep Sleep
+    - Install updated Wifi Drivers ^Restart
+    - `sudo apt-get update`
+    - `sudo apt-get install vim`
+    - [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
 1. Run all updates in Ubuntu Software.
-1. In terminal, run `sudo apt update`.
-1. Install vim (or equivalent).
+1. Run all updates in Software Updater.
+1. Login to Firefox account. Confirm Firefox Extensions.
+1. Install Slack from [Download](https://slack.com/downloads)
 1. Disk level encryption.
-
-## Install Minimum Programs
-
-1. Slack
-1. Install [Privacy Badger Extension](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) to Firefox
 
 ## Adjust Default Configurations
 
