@@ -41,31 +41,34 @@ Codename:	impish
     - `sudo apt-get install vim`
     - [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
 1. Run all updates in Ubuntu Software.
-1. Run all updates in Software Updater.
-1. Login to Firefox account. Confirm Firefox Extensions.
+1. Run all updates in Software Updater. (at this point somethings stop working so update Ubuntu version)
+1. In Software Update, update from Ubuntu 21.04 to 21.10(Impish).
+1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
 1. Install Slack from [Download](https://slack.com/downloads)
 1. Disk level encryption.
 
 ## Adjust Default Configurations
 
 1. Change dot files to personal defaults
-    - `.bash_profile` on Mac = `.profile` on Linux Ubuntu
+    - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
 1. Copy to or create new SSH keys for commputer
 1. "Favorite" Apps in your dock so they stay in the dock
     * Terminal
+    * Settings
+    * Software Updater
+    * Screenshot
     * Firefox (should be by default)
     * Files (should be by default)
-    * Slack
+    * Slack 
     * Calculator
     * Your note-taking app of choice
 1. Tweak setting on how long to wait before sleeping (1 minute is too short)
-1. Browser bookmark creations and/or import
-1. Login to Firefox if desired. Provides portability for browser data between machines
 
 ## Things To Make It Really Work That You find along the way
 * Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
 * Audacity needs a file change to give it a permission. It prompts you with instructions in a modal on start-up. The Blue microphone worked after doing this. I also had to put the sample rate at 192kb in audacity to avoid error messages.
 * See also anything in the [current summary of install steps from the frame.work 21.04 install thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722).
+* `sudo apt install gnome-tweaks` to get 2 finger right click to work.
 
 ## Generally Recommended Apps to Install on Linux
 
@@ -73,9 +76,11 @@ Codename:	impish
 1. Audacity (audio)
 1. VLC (video)
 1. Inkscape (vector art)
-1. Calibre (e-book library management)
+1. Calibre (e-book library management) `sudo apt-get install calibre`)
 1. GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
 1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
+    1. [install flatpak](https://flatpak.org/setup/Ubuntu)
+    2. [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
 
 ### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
