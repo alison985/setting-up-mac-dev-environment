@@ -83,6 +83,7 @@ Codename:	impish
 1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
     1. [install flatpak](https://flatpak.org/setup/Ubuntu)
     2. [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
+1. Dropbox (Ubuntu Software)
 
 ### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
