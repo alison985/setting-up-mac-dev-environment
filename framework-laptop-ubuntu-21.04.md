@@ -68,6 +68,19 @@ Codename:	impish
 
 ## Things To Make It Really Work That You find along the way
 * Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
+    * For playing DVDs. [Reference](https://websiteforstudents.com/how-to-play-dvd-in-ubuntu-linux/)
+      ```bash
+      #maybe sudo add-apt-repository multiverse
+      sudo apt install libdvd-pkg
+      #it's okay that some of them don't install
+      sudo apt install libdvdread7
+      sudo apt install libdvdread8
+      sudo apt install libdvdread4
+      sudo apt install libdvdnav4
+      #these are the ones that are proprietary from what I can tell
+      sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
+      sudo apt install ubuntu-restricted-extras
+      ```
 * Audacity needs a file change to give it a permission. It prompts you with instructions in a modal on start-up. The Blue microphone worked after doing this. I also had to put the sample rate at 192kb in audacity to avoid error messages.
 * See also anything in the [current summary of install steps from the frame.work 21.04 install thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722).
 * `sudo apt install gnome-tweaks` to get 2 finger right click to work.
