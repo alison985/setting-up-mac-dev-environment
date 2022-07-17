@@ -24,7 +24,6 @@ Codename:	jammy
 `Shift+Cnl+C` or `+V` to copy and paste into terminal.
 
 ## Default Install
-
 1. [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
     * Includes microphone add
     * wifi update
@@ -36,13 +35,12 @@ sudo apt-get python3-gpg            #needed for Dropbox file signature verificat
 sudo apt install gnome-tweaks       #to get 2 finger right click to work.
 sudo apt install gdebi              #GUI for package installation. recommended by Zoom install page.
 ```
-
 1. Run all updates in Ubuntu Software.
 1. Run all updates in Software Updater.
 1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
 
 
-## Install allllllll the programs
+## Install as One-offs
 1. Install Zoom [Zoom's Instructions](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
 1. Install Dropbox [Downloads page](https://www.dropbox.com/install)
     * Pause Syncing
@@ -50,7 +48,7 @@ sudo apt install gdebi              #GUI for package installation. recommended b
 1. Install Webex (yes there are people who still use this) [where to download .deb package](https://www.webex.com/downloads.html)
 
 
-## Install from Ubuntu Software:
+## Install from Ubuntu Software
     * Audacity (audio)
     * Calibre (ebook library)
     * dBeaver (DB client)
@@ -74,6 +72,23 @@ sudo ln -s /var/lib/snapd/snap /snap        #make sym link
 sudo snap install teams-for-linux           #install Microsoft Teams
 ```
 
+
+## Install from Flatpak
+1. Install Toggl Timer. [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
+    * [install flatpak](https://flatpak.org/setup/Ubuntu)
+```bash
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+    * Restart.
+    * [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
+```bash
+
+```
+
+
 ## Configuration
 1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
 
@@ -82,21 +97,11 @@ sudo snap install teams-for-linux           #install Microsoft Teams
 
 
 
-
-
-
-
-
-
-
-
 ## Not yet done
-1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
-    1. [install flatpak](https://flatpak.org/setup/Ubuntu)
-    2. [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
 1. Change dot files to personal defaults
     - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
 1. [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
+
 
 ### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
