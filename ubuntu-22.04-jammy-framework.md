@@ -26,13 +26,24 @@ Codename:	jammy
 ## Default Install
 
 1. [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
+    * Includes microphone add
+    * wifi update
 1. 
 ```bash
 sudo apt-get update
 sudo apt-get install vim
-sudo apt-get python3-gpg #needed for Dropbox file signature verification and otherwise handy
-sudo apt install gnome-tweaks #to get 2 finger right click to work.
+sudo apt-get python3-gpg            #needed for Dropbox file signature verification and otherwise handy
+sudo apt install gnome-tweaks       #to get 2 finger right click to work.
+sudo apt install gdebi              #GUI for package installation. recommended by Zoom install page.
+
+#install Microsoft Teams without error by using snap
+#https://techviewleo.com/install-and-use-microsoft-teams-on-ubuntu/
+sudo apt install snap                       #confirm installed
+sudo systemctl enable --now snapd.socket    #enable snap
+sudo ln -s /var/lib/snapd/snap /snap        #make sym link
+sudo snap install teams-for-linux           #install Microsoft Teams
 ```
+
 1. Run all updates in Ubuntu Software.
 1. Run all updates in Software Updater.
 1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
@@ -43,6 +54,7 @@ sudo apt install gnome-tweaks #to get 2 finger right click to work.
 1. Install Dropbox [Downloads page](https://www.dropbox.com/install)
     * Pause Syncing
     * Select folders for selective sync.
+
 
 ## Install from Ubuntu Software:
     * Audacity (audio)
@@ -57,12 +69,27 @@ sudo apt install gnome-tweaks #to get 2 finger right click to work.
     * VLC (video)
 
 
+## Install from Snap
+1. Microsoft Teams. There are reports that Microsoft Teams doesn't work unless installed through Snap. So, 
+
 ## Configuration
 1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ## Not yet done
-1. install Microsoft Teams, Zoom, Webex
+1. install Microsoft Teams, Webex
 1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
     1. [install flatpak](https://flatpak.org/setup/Ubuntu)
     2. [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
@@ -70,8 +97,7 @@ sudo apt install gnome-tweaks #to get 2 finger right click to work.
     - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
 1. [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
 
-### Install v
-ia Terminal
+### Install via Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
     1. Ensure connection with Gitlab. 
         * Does need key to gitlab created.
