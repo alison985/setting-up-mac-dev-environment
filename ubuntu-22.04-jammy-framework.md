@@ -34,39 +34,83 @@ Codename:	jammy
 ## Default Install
 
 1. [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
-1. `sudo apt-get update`
-1. `sudo apt-get install vim`
-1. [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
+1. 
+```bash
+sudo apt-get update
+sudo apt-get install vim
+sudo apt-get python3-gpg #needed for Dropbox file signature verification and otherwise handy
+sudo apt install gnome-tweaks #to get 2 finger right click to work.
+```
 1. Run all updates in Ubuntu Software.
 1. Run all updates in Software Updater.
 1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
-1. Install Slack, Postman, Calibre, DBeaver, GIMP, VLC
-    * Zoom [Zoom's Instructions](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
-1. Disk level encryption.
 
-## Adjust Default Configurations
+
+## Install allllllll the programs
+1. Install Zoom [Zoom's Instructions](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
+1. Install Dropbox [Downloads page](https://www.dropbox.com/install)
+    * Pause Syncing
+    * Select folders for selective sync.
+
+## Install from Ubuntu Software:
+    * Audacity (audio)
+    * Calibre
+    * dBeaver
+    * Flameshot (screenshots. currently testing out)
+    * GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
+    * Inkscape (vector art)
+    * postman
+    * qownnotes
+    * Slack
+    * VLC
+    
+    
+1. install Microsoft Teams, Zoom, Webex
+1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
+    1. [install flatpak](https://flatpak.org/setup/Ubuntu)
+    2. [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
+
+
+### Install via Terminal
+1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
+1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
+1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
+```bash
+sudo add-apt-repository ppa:mozillacorp/mozillavpn
+sudo apt-get update
+sudo apt-get install mozillavpn
+mozillavpn # turn on
+```
+Login via web browser to Firefox account.
+
+
+## Configuration
+1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
+
 
 1. Change dot files to personal defaults
     - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
+
+
+## Settings
+    * Tweak setting on how long to wait before sleeping (1 minute is too short)
+        * Settings > Power > Power Saving > Automatic Suspend.
+        * On Battery Power 15 minutes.
+        * On Plugged In 30 minutes.
+    * [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
+
+
+
+
+
+## Takes Time but worth doing
+
+1. Setup addiitonal permissions groups
+1. Setup a guest account
+1. Disk level encryption.
 1. Copy to or create new SSH keys for commputer
-1. install Microsoft Teams, Zoom, Webex
-1. "Favorite" Apps in your dock so they stay in the dock
-    * Terminal
-    * Settings
-    * Software Updater
-    * Screenshot (trying Flameshot(with a star rating) based on https://www.slant.co/topics/13130/~screenshot-programs-for-linux)
-    * Firefox (should be by default)
-    * Files (should be by default)
-    * Slack 
-    * Zoom
-    * Calculator
-    * LibreOffice / Libre writing
-    * Your note-taking app of choice (QOwnNotes)
-    * Thunderbird or email client
-1. Tweak setting on how long to wait before sleeping (1 minute is too short)
-    * Settings > Power > Power Saving > Automatic Suspend.
-    * On Battery Power 15 minutes.
-    * On Plugged In 30 minutes.
+
+
 
 ## Things To Make It Really Work That You find along the way
 * Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
@@ -85,32 +129,8 @@ Codename:	jammy
       ```
 * Audacity needs a file change to give it a permission. It prompts you with instructions in a modal on start-up. The Blue microphone worked after doing this. I also had to put the sample rate at 192kb in audacity to avoid error messages.
 * See also anything in the [current summary of install steps from the frame.work 21.04 install thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722).
-* `sudo apt install gnome-tweaks` to get 2 finger right click to work.
 
-## Generally Recommended Apps to Install on Linux
-
-### Install via Ubuntu Software.
-1. Audacity (audio)
-1. VLC (video)
-1. Inkscape (vector art)
-1. Calibre (e-book library management) `sudo apt-get install calibre`)
-1. GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
-1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
-    1. [install flatpak](https://flatpak.org/setup/Ubuntu)
-    2. [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
-1. Dropbox (Ubuntu Software)
-
-### Install via Terminal
-1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
-1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
-1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
-```bash
-sudo add-apt-repository ppa:mozillacorp/mozillavpn
-sudo apt-get update
-sudo apt-get install mozillavpn
-mozillavpn # turn on
-```
-Login via web browser to Firefox account.
+ 
 
 ### Possible installs
 1. Zoom from Software app.
@@ -143,10 +163,7 @@ Login via web browser to Firefox account.
     ```  
     * For my own reference: [short ubuntu tts page](http://www.solomonson.com/posts/2010-07-24-ubuntu-linux-text-speech/), [Festival Official Project Page](https://www.cstr.ed.ac.uk/projects/festival/). 
 
-## Takes Time but worth doing
 
-1. Setup addiitonal permissions groups
-1. Setup a guest account
 
 ## TODO
 
@@ -168,10 +185,6 @@ Login via web browser to Firefox account.
 * Notes App (default install)
 * Taskbook (installed myself)
 * NextCloud. Based on r/nextcloud it seems like a lot of work(overhead) to run yourself for my particular needs right now.
-
-## Issues Run Into So Far
-1. On opening Slack (and other programs), sometimes it will prompt you to force quit or wait. I recommend logging out of any unused Slacks in the app (you can always use them in the browser as relevant) and clicking Wait. 
-1. Zoom usage has something not nice going on. For instance, it can make not even copy and paste work. Framework community posts about optimizations may help. I have resorted to using my old Mac laptop for Zoom usage because it's just too painful.
 
 
 
