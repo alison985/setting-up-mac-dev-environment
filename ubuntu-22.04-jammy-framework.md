@@ -27,24 +27,24 @@ Codename:	jammy
 1. [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
     * Includes microphone add
     * wifi update
-1. 
-```bash
-sudo apt-get update
-sudo apt-get install vim
-sudo apt-get python3-gpg            #needed for Dropbox file signature verification and otherwise handy
-sudo apt install gnome-tweaks       #to get 2 finger right click to work.
-sudo apt install gdebi              #GUI for package installation. recommended by Zoom install page.
-```
+1. Install stuff you'll need later.
+    ```bash
+    sudo apt-get update
+    sudo apt-get install vim
+    sudo apt-get python3-gpg            #needed for Dropbox file signature verification and otherwise handy
+    sudo apt install gnome-tweaks       #to get 2 finger right click to work.
+    sudo apt install gdebi              #GUI for package installation. recommended by Zoom install page.
+    ```
 1. Run all updates in Ubuntu Software.
 1. Run all updates in Software Updater.
 1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
 1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
-```bash
-sudo add-apt-repository ppa:mozillacorp/mozillavpn
-sudo apt-get update
-sudo apt-get install mozillavpn
-```
-Open the MozillaVPN app. Login via web browser to Firefox account.
+    ```bash
+    sudo add-apt-repository ppa:mozillacorp/mozillavpn
+    sudo apt-get update
+    sudo apt-get install mozillavpn
+    ```
+    Open the MozillaVPN app. Login via web browser to Firefox account.
 1. Deep sleep seems to be enabled already for 22.04. Confirm that `cat /sys/power/mem_sleep` returns `[s2idle] deep` or see [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/8)
 
 
@@ -57,42 +57,42 @@ Open the MozillaVPN app. Login via web browser to Firefox account.
 
 
 ## Install from Ubuntu Software
-    * Audacity (audio)
-    * Calibre (ebook library)
-    * dBeaver (DB client)
-    * Flameshot (screenshots. currently testing out)
-    * GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
-    * Inkscape (vector art)
-    * postman (API call making and testing)
-    * qownnotes (notes)
-    * Slack
-    * VLC (video)
+* Audacity (audio)
+* Calibre (ebook library)
+* dBeaver (DB client)
+* Flameshot (screenshots. currently testing out)
+* GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
+* Inkscape (vector art)
+* postman (API call making and testing)
+* qownnotes (notes)
+* Slack
+* VLC (video)
 
 
 ## Install from Snap
 1. Microsoft Teams. There are reports that Microsoft Teams doesn't work unless installed through Snap. So, do this.
-```bash
-#install Microsoft Teams without error by using snap
-#https://techviewleo.com/install-and-use-microsoft-teams-on-ubuntu/
-sudo apt install snap                       #confirm installed
-sudo systemctl enable --now snapd.socket    #enable snap
-sudo ln -s /var/lib/snapd/snap /snap        #make sym link
-sudo snap install teams-for-linux           #install Microsoft Teams
-```
+    ```bash
+    #install Microsoft Teams without error by using snap
+    #https://techviewleo.com/install-and-use-microsoft-teams-on-ubuntu/
+    sudo apt install snap                       #confirm installed
+    sudo systemctl enable --now snapd.socket    #enable snap
+    sudo ln -s /var/lib/snapd/snap /snap        #make sym link
+    sudo snap install teams-for-linux           #install Microsoft Teams
+    ```
 
 
 ## Install from Flatpak
 1. Install Toggl Timer. [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
     * [install flatpak](https://flatpak.org/setup/Ubuntu)
-```bash
-sudo apt install flatpak
-sudo apt install gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```
+    ```bash
+    sudo apt install flatpak
+    sudo apt install gnome-software-plugin-flatpak
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
     * Restart.
     * Open "Software" app. Search for toggl and install "Toggl Track".
 1. Install Github Desktop
-    1. Ensure connection with Gitlab. 
+    * Ensure connection with Gitlab. 
         * Does need key to gitlab created.
         * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
 
