@@ -100,7 +100,7 @@ Login via web browser to Firefox account.
     * [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
 
 
-
+ 
 
 
 ## Takes Time but worth doing
