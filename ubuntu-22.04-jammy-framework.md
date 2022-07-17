@@ -1,25 +1,5 @@
 
 > Created as a copy of the 21.04 document on 2022-07-16
-
-## Repo Creator's Opinions
-
-* When ordering a computer you do NOT want vPro in your Wifi chip. From what I read it has a remote machine takeover. Was designed for corporations to have access to employee laptops.
-* De-google, de-apple, de-monopolize yourself.
-* :The more you know: about computers the better off you will be. 
-* Ubuntu with Gnome GUI is very equivalent to a Windows or Mac computer at this point(Oct 2021). The graphics are just not as sleek and you have more control and freedom. 
-
-## Current Assumptions
-1. This set of assumptions are based on installing Ubuntu 22.04 LTS(July 7, 2022). By default: 
-    * Some level of Wi-fi works
-    * Firefox is installed
-    * External Monitor plug-in works
-    * Connecting a printer works
-    * LibreOffice is installed
-1. You want a computer mirroring Alison's setup. Mix-and-match as desired. Use at your own risk as the GNU GPLv2 license says.
-1. You will need a USB key (portable USB) that is at least 4 GB large. This will allow you to make an Ubuntu bootable USB so you can install the OS on your new machine. PLEASE BE AWARE you have to _DELETE_ everything on it in order to do this*... pick a USB key to use accordingly.
-1. These instructions will get out of date relatively quickly.
-
-As of 2022-07-16.
 ```bash
 No LSB modules are available.
 Distributor ID:	Ubuntu
@@ -27,6 +7,18 @@ Description:	Ubuntu 22.04 LTS
 Release:	22.04
 Codename:	jammy
 ```
+
+## Notes and Assumptions
+* When ordering a computer you do NOT want vPro in your Wifi chip. From what I read it has a remote machine takeover. Was designed for corporations to have access to employee laptops.
+*  This set of assumptions are based on installing Ubuntu 22.04 LTS(July 7, 2022). By default: 
+    * Some level of Wi-fi works
+    * Firefox is installed
+    * External Monitor plug-in works
+    * Connecting a printer works
+    * LibreOffice is installed
+* You want a computer mirroring Alison's setup. Mix-and-match as desired. Use at your own risk as the GNU GPLv2 license says.
+* You will need a USB key (portable USB) that is at least 4 GB large. This will allow you to make an Ubuntu bootable USB so you can install the OS on your new machine. PLEASE BE AWARE you have to _DELETE_ everything on it in order to do this*... pick a USB key to use accordingly.
+* These instructions will get out of date relatively quickly.
 
 ## Remember
 `Shift+Cnl+C` or `+V` to copy and paste into terminal.
@@ -63,15 +55,23 @@ sudo apt install gnome-tweaks #to get 2 finger right click to work.
     * qownnotes (notes)
     * Slack
     * VLC (video)
-    
-    
+
+
+## Configuration
+1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
+
+
+## Not yet done
 1. install Microsoft Teams, Zoom, Webex
 1. Toggl Timer. Otherise [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
     1. [install flatpak](https://flatpak.org/setup/Ubuntu)
     2. [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
+1. Change dot files to personal defaults
+    - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
+1. [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
 
-
-### Install via Terminal
+### Install v
+ia Terminal
 1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
     1. Ensure connection with Gitlab. 
         * Does need key to gitlab created.
@@ -87,18 +87,12 @@ mozillavpn # turn on
 Login via web browser to Firefox account.
 
 
-## Configuration
-1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
-1. Change dot files to personal defaults
-    - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
-
-
 ## Settings
-    * Tweak setting on how long to wait before sleeping (1 minute is too short)
-        * Settings > Power > Power Saving > Automatic Suspend.
-        * On Battery Power 15 minutes.
-        * On Plugged In 30 minutes.
-    * [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
+1. Tweak setting on how long to wait before sleeping (1 minute is too short)
+    * Settings > Power > Power Saving > Automatic Suspend.
+    * On Battery Power 15 minutes.
+    * On Plugged In 30 minutes.
+
 
 
 ## Things To Make It Really Work That You find along the way
