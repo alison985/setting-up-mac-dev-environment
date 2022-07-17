@@ -33,7 +33,7 @@ Codename:	jammy
 
 ## Default Install
 
-1. [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
+1. [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
 1. `sudo apt-get update`
 1. `sudo apt-get install vim`
 1. [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
@@ -41,6 +41,7 @@ Codename:	jammy
 1. Run all updates in Software Updater.
 1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
 1. Install Slack, Postman, Calibre, DBeaver, GIMP, VLC
+    * Zoom [Zoom's Instructions](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
 1. Disk level encryption.
 
 ## Adjust Default Configurations
