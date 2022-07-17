@@ -38,6 +38,14 @@ sudo apt install gdebi              #GUI for package installation. recommended b
 1. Run all updates in Ubuntu Software.
 1. Run all updates in Software Updater.
 1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
+1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
+```bash
+sudo add-apt-repository ppa:mozillacorp/mozillavpn
+sudo apt-get update
+sudo apt-get install mozillavpn
+```
+Open the MozillaVPN app. Login via web browser to Firefox account.
+1. Deep sleep seems to be enabled already for 22.04. Confirm that `cat /sys/power/mem_sleep` returns `[s2idle] deep` or see [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/8)
 
 
 ## Install as One-offs
@@ -81,13 +89,12 @@ sudo apt install flatpak
 sudo apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
-
     * Restart.
-    * [toggl on flatpak](https://flathub.org/apps/details/com.toggl.TogglDesktop) - this may also be possible through a new app(that I think was added by flatpak) called Software
-```bash
-
-```
-
+    * Open "Software" app. Search for toggl and install "Toggl Track".
+1. Install Github Desktop
+    1. Ensure connection with Gitlab. 
+        * Does need key to gitlab created.
+        * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
 
 ## Configuration
 1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
@@ -100,23 +107,12 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ## Not yet done
 1. Change dot files to personal defaults
     - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
-1. [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/7) ^Restart
+
 
 
 ### Install via Terminal
-1. [Github Desktop for Linux](https://github.com/shiftkey/desktop/)
-    1. Ensure connection with Gitlab. 
-        * Does need key to gitlab created.
-        * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
 1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
-1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
-```bash
-sudo add-apt-repository ppa:mozillacorp/mozillavpn
-sudo apt-get update
-sudo apt-get install mozillavpn
-mozillavpn # turn on
-```
-Login via web browser to Firefox account.
+
 
 
 ## Settings
@@ -147,7 +143,6 @@ Login via web browser to Firefox account.
 
  
 ### Possible installs
-
 1. Text-to-speech, especially for ePub. 
     * Install voice synthesizer and a nice voice. From [askubuntu.com answer](https://askubuntu.com/a/908889)
     ```bash
@@ -182,7 +177,6 @@ Login via web browser to Firefox account.
 
 
 ## TODO
-
 1. Screenshots
 1. Note-taking
 1. Passwords
