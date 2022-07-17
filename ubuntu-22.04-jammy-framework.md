@@ -96,23 +96,15 @@ Codename:	jammy
         * Does need key to gitlab created.
         * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
 
+
 ## Configuration
 1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
-
-
-
-
-
-
-## Not yet done
 1. Change dot files to personal defaults
-    - `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
-
+    * `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
 
 
 ### Install via Terminal
 1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
-
 
 
 ## Settings
