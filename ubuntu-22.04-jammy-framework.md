@@ -10,7 +10,8 @@ Codename:	jammy
 
 ## Notes and Assumptions
 * When ordering a computer you do NOT want vPro in your Wifi chip. From what I read it has a remote machine takeover. Was designed for corporations to have access to employee laptops.
-*  This set of assumptions are based on installing Ubuntu 22.04 LTS(July 7, 2022). By default: 
+* As a whole this document lists steps to do in order. Or at least an order that should work. That said, mix and match and YMMV.
+* This set of assumptions are based on installing Ubuntu 22.04 LTS(July 7, 2022). By default: 
     * Some level of Wi-fi works
     * Firefox is installed
     * External Monitor plug-in works
@@ -34,9 +35,12 @@ Codename:	jammy
     sudo apt-get python3-gpg            #needed for Dropbox file signature verification and otherwise handy
     sudo apt install gnome-tweaks       #to get 2 finger right click to work.
     sudo apt install gdebi              #GUI for package installation. recommended by Zoom install page.
+    mkdir ~/Sites                       #directory to clone repos to so that you don't have problems with Dropbox sync
     ```
 1. Run all updates in Ubuntu Software.
 1. Run all updates in Software Updater.
+1. Probably a good place to restart if you haven't recently.
+1. Plug-in external monitor.
 1. Login to Firefox account. Confirm Firefox Extensions. This adds bookmarks and passwords too.
 1. Mozilla VPN. [instructions](https://support.mozilla.org/en-US/kb/how-install-mozilla-vpn-linux-computer)
     ```bash
@@ -50,15 +54,17 @@ Codename:	jammy
 
 ## Install as One-offs
 1. Install Zoom [Zoom's Instructions](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
+    * Login to Zoom.
 1. Install Dropbox [Downloads page](https://www.dropbox.com/install)
+    * Login to Dropbox.
     * Pause Syncing
-    * Select folders for selective sync.
+    * Select folders for selective sync. Do a set, then another set, then another set so that you have the files you most need available first.
 1. Install Webex (yes there are people who still use this) [where to download .deb package](https://www.webex.com/downloads.html)
 
 
 ## Install from Ubuntu Software
 * Audacity (audio)
-* Calibre (ebook library)
+* Calibre (ebook library) (copy your existing library into place from a backup first)
 * dBeaver (DB client)
 * Flameshot (screenshots. currently testing out)
 * GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
@@ -66,6 +72,7 @@ Codename:	jammy
 * postman (API call making and testing)
 * qownnotes (notes)
 * Slack
+    * Login to Slack
 * VLC (video)
 
 
@@ -91,16 +98,18 @@ Codename:	jammy
     ```
     * Restart.
     * Open "Software" app. Search for toggl and install "Toggl Track".
-1. Install Github Desktop
-    * Ensure connection with Gitlab. 
-        * Does need key to gitlab created.
-        * Must pull repo through Terminal CLI from Gitlab and _then_ you can use it in Github for Desktop. Github for Desktop, on Linux at least, no longer offers a GUI interface for connecting to non-Github or local repo sources.
+1. Install Github Desktop. 
+    * Login to Github.
+    * Clone repos from Gitlab with your personal access token.
 
 
 ## Configuration
 1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
 1. Change dot files to personal defaults
     * `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
+1. Log into Zoom and Teams to make sure your mic and video are working.
+1. Log into Pocket and Pinterest from your browser.
+1. Setup relevant email accounts in Thunderbird or other smail client.
 
 
 ### Install via Terminal
@@ -115,7 +124,7 @@ Codename:	jammy
 
 
 
-## Things To Make It Really Work That You find along the way
+<!-- ## Things To Make It Really Work That You find along the way
 * Video codecs. There's an apt option for ubuntu-restricted-extras. However, for me, in this laptop and configuration, `sudo apt-get install -y ffmpeg` worked for me. Make sure to restart your browser.
     * For playing DVDs. [Reference](https://websiteforstudents.com/how-to-play-dvd-in-ubuntu-linux/)
       ```bash
@@ -158,7 +167,7 @@ Codename:	jammy
     ```bash
     flatpak install flathub com.github.johnfactotum.Foliate
     ```  
-    * For my own reference: [short ubuntu tts page](http://www.solomonson.com/posts/2010-07-24-ubuntu-linux-text-speech/), [Festival Official Project Page](https://www.cstr.ed.ac.uk/projects/festival/). 
+    * For my own reference: [short ubuntu tts page](http://www.solomonson.com/posts/2010-07-24-ubuntu-linux-text-speech/), [Festival Official Project Page](https://www.cstr.ed.ac.uk/projects/festival/).  -->
 
 
 ## Takes Time but worth doing
