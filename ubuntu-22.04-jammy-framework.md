@@ -1,11 +1,14 @@
 
 > Created as a copy of the 21.04 document on 2022-07-16
 ```bash
+>> lsb_reelase -a
 No LSB modules are available.
 Distributor ID:	Ubuntu
 Description:	Ubuntu 22.04 LTS
 Release:	22.04
 Codename:	jammy
+>> python3 --version
+Python 3.10.4
 ```
 
 ## Notes and Assumptions
@@ -76,7 +79,7 @@ Codename:	jammy
 * VLC (video)
 
 
-## Install from Snap
+## Install from Snap ("Software" app)
 1. Microsoft Teams. There are reports that Microsoft Teams doesn't work unless installed through Snap. So, do this.
     ```bash
     #install Microsoft Teams without error by using snap
@@ -86,6 +89,7 @@ Codename:	jammy
     sudo ln -s /var/lib/snapd/snap /snap        #make sym link
     sudo snap install teams-for-linux           #install Microsoft Teams
     ```
+1. Visual Studio Code. Make sure you get the one that is called "code" and says by "Visual Studio Code [green checkmark]
 
 
 ## Install from Flatpak
@@ -104,10 +108,18 @@ Codename:	jammy
 
 
 ## Configuration
+1. If you haven't for awhile, this is a good time to restart.
 1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
 1. Change dot files to personal defaults
     * `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
 1. Log into Zoom and Teams to make sure your mic and video are working.
+1. Open Visual Studio Code (I'm trying it out). 
+    * Color Theme: Monokai Dimmed
+    * Language support: 
+        * Python, HTML CSS, Javascript, YAML, Jinja, 
+        * Other language support (testing): Color Highlight, TODO Highlights, Rainbow CSV, SQLTools, VSCode Great Icons
+        * Consider in future: Bookmarks, XML, Python Extension Pack, Bootstrap 4, Debugger for Firefox, Highlight Matching Tag, Paste JSON as Code, MySQL, Github Respositories, AWS Toolkit, Docker, Snowflake Driver for SQLTools, SQLTools PostgreSQL/Redshift Driver, SQL(BigQuery), sqlfluff, one of the dbt ones
+    * Select your python interpreter
 1. Log into Pocket and Pinterest from your browser.
 1. Setup relevant email accounts in Thunderbird or other smail client.
 
