@@ -122,6 +122,11 @@ Python 3.10.4
     * Select your python interpreter
 1. Log into Pocket and Pinterest from your browser.
 1. Setup relevant email accounts in Thunderbird or other smail client.
+1. Python dev environment. Yes, yes, install an environment manager first.
+    ```bash
+    sudo apt install python3-pip`
+    sudo pip3 install pandas
+    ``` 
 
 
 ### Install via Terminal
