@@ -30,9 +30,30 @@ Python 3.10.4
 #INSTALL
 
 ## Default Install
-1. [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
+1. [Official Frame.work Ubuntu 22.04 Install Guide](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
+
+```bash
+# Make sure to update your packages to get the latest kernel
+sudo apt update && sudo apt upgrade -y
+
+# To enable headset mic input, edit /etc/modprobe.d/alsa-base.conf
+echo "options snd-hda-intel model=dell-headset-multi" | sudo tee -a /etc/modprobe.d/alsa-base.conf
+
+# On some SSDs (e.g. SN750 with older firmware), there is a workaround to improve suspend battery life
+sudo sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1/g' /etc/default/grub
+
+# Then refresh the GRUB configuration
+sudo update-grub
+
+# And reboot
+sudo reboot
+```
+
+<!--
+[Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
     * Includes microphone add
     * wifi update
+-->
 1. Install stuff you'll need later.
     ```bash
     sudo apt-get update
@@ -70,7 +91,7 @@ Python 3.10.4
 ## Install from Ubuntu Software
 * Audacity (audio)
 * Calibre (ebook library) (copy your existing library into place from a backup first)
-* dBeaver (DB client)
+* dBeaver and/or BeeKeeper Studio (DB client)
 * Flameshot (screenshots. currently testing out)
 * GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
 * Inkscape (vector art)
@@ -92,7 +113,7 @@ Python 3.10.4
     sudo ln -s /var/lib/snapd/snap /snap        #make sym link
     sudo snap install teams-for-linux           #install Microsoft Teams
     ```
-1. Visual Studio Code. Make sure you get the one that is called "code" and says by "Visual Studio Code [green checkmark]
+1. [VSCodium - the privacy-aware Visual Studio Code](https://github.com/VSCodium/vscodium). Text-based coding IDE. Binary releases of VS Code without MS branding/telemetry/licensing 
 
 
 ## Install from Flatpak
