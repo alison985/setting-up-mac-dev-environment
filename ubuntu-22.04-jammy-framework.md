@@ -27,6 +27,8 @@ Python 3.10.4
 ## Remember
 `Shift+Cnl+C` or `+V` to copy and paste into terminal.
 
+#INSTALL
+
 ## Default Install
 1. [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
     * Includes microphone add
@@ -77,6 +79,7 @@ Python 3.10.4
 * Slack
     * Login to Slack
 * VLC (video)
+* Brasero (burn cd, dvd)
 
 
 ## Install from Snap ("Software" app)
@@ -105,6 +108,47 @@ Python 3.10.4
 1. Install Github Desktop. 
     * Login to Github.
     * Clone repos from Gitlab with your personal access token.
+
+## Install for Development Environment (from 15.10 instructions, probablu out-of-date)
+
+### Python
+```bash
+sudo apt-get install python-pip python-dev build-essential 
+sudo pip install --upgrade pip 
+sudo pip install --upgrade virtualenv 
+sudo pip install --upgrade virtualenvwrapper
+```
+
+### Postgres [Source](http://tecadmin.net/install-postgresql-server-on-ubuntu/)
+
+Command line
+```bash
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install postgresql
+sudo su - postgres
+psql
+```
+
+OPTIONAL STEPS (good for finding port that postgres is running on. Default is 5432.
+Postgres:
+```postgresql
+\conninfo
+\q
+```
+
+Command line:
+```bash
+su MAINUSERNAME
+(password)
+```
+
+### Install some servers. [Source](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
+
+```bash
+sudo apt-get install git nginx gunicorn
+```
 
 
 ## Configuration
@@ -190,13 +234,13 @@ Python 3.10.4
 ## Takes Time but worth doing
 1. Setup addiitonal permissions groups
 1. Setup a guest account
-1. Disk level encryption.
+1. Disk level encryption
 1. Copy to or create new SSH keys for commputer
 
 
 ## TODO
 1. Screenshots
-1. Note-taking
+1. Note-taking (Joplin ATM)
 1. Passwords
 1. Shortcut to put computer to sleep
 
