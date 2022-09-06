@@ -1,5 +1,6 @@
 
-> Created as a copy of the 21.04 document on 2022-07-16
+> Created as a copy of the 21.04 document on 2022-07-16.
+
 ```bash
 >> lsb_reelase -a
 No LSB modules are available.
@@ -30,24 +31,7 @@ Python 3.10.4
 #INSTALL
 
 ## Default Install
-1. [Official Frame.work Ubuntu 22.04 Install Guide](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
-
-```bash
-# Make sure to update your packages to get the latest kernel
-sudo apt update && sudo apt upgrade -y
-
-# To enable headset mic input, edit /etc/modprobe.d/alsa-base.conf
-echo "options snd-hda-intel model=dell-headset-multi" | sudo tee -a /etc/modprobe.d/alsa-base.conf
-
-# On some SSDs (e.g. SN750 with older firmware), there is a workaround to improve suspend battery life
-sudo sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1/g' /etc/default/grub
-
-# Then refresh the GRUB configuration
-sudo update-grub
-
-# And reboot
-sudo reboot
-```
+I integrated lots of info from lots of thread, however the [Official Frame.work Ubuntu 22.04 Install Guide](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en) is available.
 
 <!--
 [Original 21.04 Install guide thread](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722) [Framework Guide for Installing 22.04](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en)
@@ -57,11 +41,19 @@ sudo reboot
 1. Install stuff you'll need later.
     ```bash
     sudo apt-get update
+    sudo apt upgrade -y
     sudo apt-get install vim
     sudo apt-get python3-gpg            #needed for Dropbox file signature verification and otherwise handy
     sudo apt install gnome-tweaks       #to get 2 finger right click to work.
     sudo apt install gdebi              #GUI for package installation. recommended by Zoom install page.
     mkdir ~/Sites                       #directory to clone repos to so that you don't have problems with Dropbox sync
+    sudo vim /etc/modprobe.d/alsa-base.conf     #enable headset mic input
+    [scroll to end of file]
+    i
+    enter
+    options snd-hda-intel model=dell-headset-multi
+    esc
+    :qw
     ```
 1. Run all updates in Ubuntu Software.
 1. Run all updates in Software Updater.
@@ -75,6 +67,36 @@ sudo reboot
     sudo apt-get install mozillavpn
     ```
     Open the MozillaVPN app. Login via web browser to Firefox account.
+
+1. Improve power usage on sleep/suspend.
+```bash
+# On some SSDs (e.g. SN750 with older firmware), there is a workaround to improve suspend battery life
+#   How to change grub options in general https://linuxhint.com/change-grub-options/
+#   why change from deep sleep like used in 21.04 https://community.frame.work/t/linux-battery-life-tuning/6665#suspend-power-usage-2 AND default enabled in 22.04
+#   from frame.work instructions: sudo sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1/g' /etc/default/grub
+
+sudo cp /etc/default/grub /etc/default/grub.bak     #make backup of file before changing it
+sudo vim /etc/default/grub
+[scroll to end of tile]
+i
+enter
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1"
+esc
+:qw
+```
+
+# confirm change
+```bash
+cat /sys/power/mem_sleep
+## not this isn't updating for me from the `[s2idle] deep` response even after reboot
+```
+
+# Then refresh the GRUB configuration
+sudo update-grub
+
+# And reboot
+sudo reboot
+```
 1. Deep sleep seems to be enabled already for 22.04. Confirm that `cat /sys/power/mem_sleep` returns `[s2idle] deep` or see [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/8)
 
 
