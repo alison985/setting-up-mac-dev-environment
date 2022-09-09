@@ -152,9 +152,11 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
 ## Install for Development Environment
 
 1. Python
+Note, `python` does not work in the Terminal. That's because there's no alias from python3 to python. If `python` does work then `.bashrc` has to refer to /usr/bin/python instead of what's below. Yes, the lack of this alias then creates a mis-match between virtualenv(wrapper) and the VSCodium python interpreter setting. That said, I have yet to try VSCodium to run Python, so maybe it can't detect the /python3(non-alias) version? Python 3.10.4 is the result in the Terminal and and Python 3.10.6 is mentioned in the VSCodium dialogue to select a python interpreter, which strengthens this theory.
+ 
+:shrug: You will have virtualenv and virtualenvwrapper for MyCroft and python scripting without Docker containers.
 
     ```bash
-    # `python` does not work
     python3 --version
         > Python 3.10.4
     sudo apt-get install python3-pip build-essential # python-dev was here but no longer has an installation candidate
@@ -164,10 +166,31 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
     sudo pip install --upgrade pip              # --upgrade pip3 won't work
     sudo pip install --upgrade virtualenv 
     sudo pip install --upgrade virtualenvwrapper
-    
-    # Make your first virtual environment and put pandas in it.    
-    #sudo create environment. go to environment.
-    sudo pip install pandas
+
+    # Setup virtualenvwrapper
+    # Reference, but not enough https://virtualenvwrapper.readthedocs.io/en/latest/
+    cd ~/
+    export WORKON_HOME=~/Envs
+    mkdir -p $WORKON_HOME
+    sudo vim .bashrc
+    [scroll to bottom] 
+    i
+    #virtualenvwrapper config
+    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+    export WORKON_HOME=~/Envs
+    source /usr/local/bin/virtualenvwrapper.sh
+    [ESC]
+    :w
+    :q
+    ```
+
+    #  5. Run: workon
+    #  6. A list of environments, empty, is printed.
+    #  7. Run: mkvirtualenv temp
+    #  8. Run: workon
+    #  9. This time, the "temp" environment is included.
+    # 10. Run: workon temp
+    # 11. The virtual environment is activated. Maybe you want to install pandas.
     ```
 1. Open VSCodium(privacy version of Visual Studio Code) that was installed above. 
     * Color Theme: Monokai Dimmed
@@ -181,7 +204,7 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
             * Rainbow CSV
         * Consider in future: Bookmarks, XML, Python Extension Pack, Bootstrap 4 and/or Bootstrap 5 & Font Awesome Snippets, Debugger for Firefox, Highlight Matching Tag, Paste JSON as Code, MySQL, Github Respositories, AWS Toolkit, Docker, Snowflake Driver for SQLTools, SQLTools PostgreSQL/Redshift Driver, SQL(BigQuery), sqlfluff, one of the dbt ones, Color Picker or Color Highlight or something else, a TODO one
 
-    * Select your python interpreter (Recommended: Python 3.10.6 64-bit)
+    * Select your python interpreter (Recommended: /usr/bin/python Python 3.10.6 64-bit)
 
 1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
 
@@ -211,14 +234,14 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
 1. Install some servers. [Source](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
     ```bash
     sudo apt-get install git nginx gunicorn
-    ```
+1. In .bashrc, [change HISTFILESIZE=2000 to 20000]    ```
 
 
 ## Configuration
 1. If you haven't for awhile, this is a good time to restart.
 1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, System Monitor, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app(Joplin). Others to consider: screenshot, Thunderbird or email client, "Software"(instead of Ubuntu Software)
 1. Change dot files to personal defaults
-    * `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See [Mac OS](mac-os_thru_2021.md) in this repo.
+    * DO WITH CAUTION, these are out of date and probably are missing things from above. `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See [Mac OS](mac-os_thru_2021.md) in this repo.
 1. Log into Zoom and Microsoft Teams (and Webex) to make sure your mic and video are permissioned and working.
 1. Log into Pocket and Pinterest from your browser.
 1. Setup relevant email accounts in Thunderbird or other smail client.
