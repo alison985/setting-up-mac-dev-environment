@@ -28,7 +28,7 @@ Python 3.10.4
 ## Remember
 `Shift+Cnl+C` or `+V` to copy and paste into terminal.
 
-#INSTALL
+# INSTALL
 
 ## Default Install
 I integrated lots of info from lots of thread, however the [Official Frame.work Ubuntu 22.04 Install Guide](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop/109?lang=en) is available.
@@ -38,7 +38,7 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
     * Includes microphone add
     * wifi update
 -->
-1. Install stuff you'll need later.
+1. Install stuff in Terminal that you'll need later.
     ```bash
     sudo apt-get update
     sudo apt upgrade -y
@@ -67,36 +67,33 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
     sudo apt-get install mozillavpn
     ```
     Open the MozillaVPN app. Login via web browser to Firefox account.
-
 1. Improve power usage on sleep/suspend.
-```bash
-# On some SSDs (e.g. SN750 with older firmware), there is a workaround to improve suspend battery life
-#   How to change grub options in general https://linuxhint.com/change-grub-options/
-#   why change from deep sleep like used in 21.04 https://community.frame.work/t/linux-battery-life-tuning/6665#suspend-power-usage-2 AND default enabled in 22.04
-#   from frame.work instructions: sudo sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1/g' /etc/default/grub
+    ```bash
+    # On some SSDs (e.g. SN750 with older firmware), there is a workaround to improve suspend battery life
+    #   How to change grub options in general https://linuxhint.com/change-grub-options/
+    #   why change from deep sleep like used in 21.04 https://community.frame.work/t/linux-battery-life-tuning/6665#suspend-power-usage-2 AND default enabled in 22.04
+    #   from frame.work instructions: sudo sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1/g' /etc/default/grub
 
-sudo cp /etc/default/grub /etc/default/grub.bak     #make backup of file before changing it
-sudo vim /etc/default/grub
-[scroll to end of tile]
-i
-enter
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1"
-esc
-:qw
-```
+    sudo cp /etc/default/grub /etc/default/grub.bak     #make backup of file before changing it
+    sudo vim /etc/default/grub
+    [scroll to end of tile]
+    i
+    enter
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1"
+    esc
+    :qw
+    ```
+1. confirm change
+    ```bash
+    cat /sys/power/mem_sleep
+    ## note this isn't updating for me from the `[s2idle] deep` response even after reboot
 
-# confirm change
-```bash
-cat /sys/power/mem_sleep
-## not this isn't updating for me from the `[s2idle] deep` response even after reboot
-```
+    # Then refresh the GRUB configuration
+    sudo update-grub
 
-# Then refresh the GRUB configuration
-sudo update-grub
-
-# And reboot
-sudo reboot
-```
+    # And reboot
+    sudo reboot
+    ```
 1. Deep sleep seems to be enabled already for 22.04. Confirm that `cat /sys/power/mem_sleep` returns `[s2idle] deep` or see [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/8)
 
 
@@ -114,11 +111,10 @@ sudo reboot
 * Audacity (audio)
 * Calibre (ebook library) (copy your existing library into place from a backup first)
 * dBeaver and/or BeeKeeper Studio (DB client)
-* Flameshot (screenshots. currently testing out)
 * GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
 * Inkscape (vector art)
 * postman (API call making and testing)
-* qownnotes (notes)
+* ?? qownnotes (notes)
 * Slack
     * Login to Slack
 * VLC (video)
@@ -141,83 +137,104 @@ sudo reboot
 ## Install from Flatpak
 1. Install Toggl Timer. [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
     * [install flatpak](https://flatpak.org/setup/Ubuntu)
-    ```bash
-    sudo apt install flatpak
-    sudo apt install gnome-software-plugin-flatpak
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    ```
+        ```bash
+        sudo apt install flatpak
+        sudo apt install gnome-software-plugin-flatpak
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+        ```
     * Restart.
     * Open "Software" app. Search for toggl and install "Toggl Track".
-1. Install Github Desktop. 
-    * Login to Github.
-    * Clone repos from Gitlab with your personal access token.
+1. Install the Github Desktop app. 
+    * In the app, login to Github.
+    * Clone repos from Gitlab with your Gitlab personal access token in Terminal.
 
-## Install for Development Environment (from 15.10 instructions, probablu out-of-date)
 
-### Python
-```bash
-sudo apt-get install python-pip python-dev build-essential 
-sudo pip install --upgrade pip 
-sudo pip install --upgrade virtualenv 
-sudo pip install --upgrade virtualenvwrapper
-```
+## Install for Development Environment
 
-### Postgres [Source](http://tecadmin.net/install-postgresql-server-on-ubuntu/)
+1. Python
 
-Command line
-```bash
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
-wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install postgresql
-sudo su - postgres
-psql
-```
+    ```bash
+    # `python` does not work
+    python3 --version
+        > Python 3.10.4
+    sudo apt-get install python3-pip build-essential # python-dev was here but no longer has an installation candidate
 
-OPTIONAL STEPS (good for finding port that postgres is running on. Default is 5432.
-Postgres:
-```postgresql
-\conninfo
-\q
-```
+    # Both `pip --version` and `pip3 --version` work and are the same result.
 
-Command line:
-```bash
-su MAINUSERNAME
-(password)
-```
+    sudo pip install --upgrade pip              # --upgrade pip3 won't work
+    sudo pip install --upgrade virtualenv 
+    sudo pip install --upgrade virtualenvwrapper
+    
+    # Make your first virtual environment and put pandas in it.    
+    #sudo create environment. go to environment.
+    sudo pip install pandas
+    ```
+1. Open VSCodium(privacy version of Visual Studio Code) that was installed above. 
+    * Color Theme: Monokai Dimmed
+    * Language support: 
+        * Search `@builtin` will have the following installed: HTML, JavaScript, JSON, Markdown, Python, Shell Script, SQL, and YAML Language Basics
+        * Search with `@sort:rating` or `@sort:installs` to find the following
+            * Don't install SQLTools - it's not great. Use a dedicated SQL client.
+            * YAML from Redhat
+            * Better Jinja from samuelcolvin
+            * an icon package (Material Icon Theme by PKief with 107k+ downloads)
+            * Rainbow CSV
+        * Consider in future: Bookmarks, XML, Python Extension Pack, Bootstrap 4 and/or Bootstrap 5 & Font Awesome Snippets, Debugger for Firefox, Highlight Matching Tag, Paste JSON as Code, MySQL, Github Respositories, AWS Toolkit, Docker, Snowflake Driver for SQLTools, SQLTools PostgreSQL/Redshift Driver, SQL(BigQuery), sqlfluff, one of the dbt ones, Color Picker or Color Highlight or something else, a TODO one
 
-### Install some servers. [Source](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
+    * Select your python interpreter (Recommended: Python 3.10.6 64-bit)
 
-```bash
-sudo apt-get install git nginx gunicorn
-```
+1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
+
+1. Postgres [Source](http://tecadmin.net/install-postgresql-server-on-ubuntu/) (CHECK THESE to ensure they are up-to-date)
+    ```bash
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+    wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
+    sudo apt-get update
+    sudo apt-get install postgresql
+    sudo su - postgres
+    psql
+    ```
+
+    OPTIONAL STEPS (good for finding port that postgres is running on. Default is 5432.
+    Postgres:
+    ```postgresql
+    \conninfo
+    \q
+    ```
+
+    Command line:
+    ```bash
+    su MAINUSERNAME
+    (password)
+    ```
+
+1. Install some servers. [Source](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
+    ```bash
+    sudo apt-get install git nginx gunicorn
+    ```
 
 
 ## Configuration
 1. If you haven't for awhile, this is a good time to restart.
-1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app. Others to consider: screenshot, Thunderbird or email client, Software Updater
+1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, System Monitor, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app(Joplin). Others to consider: screenshot, Thunderbird or email client, "Software"(instead of Ubuntu Software)
 1. Change dot files to personal defaults
-    * `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See README.md in this repo.
-1. Log into Zoom and Teams to make sure your mic and video are working.
-1. Open Visual Studio Code (I'm trying it out). 
-    * Color Theme: Monokai Dimmed
-    * Language support: 
-        * Python, HTML CSS, Javascript, YAML, Jinja, 
-        * Other language support (testing): Color Highlight, TODO Highlights, Rainbow CSV, SQLTools, VSCode Great Icons
-        * Consider in future: Bookmarks, XML, Python Extension Pack, Bootstrap 4, Debugger for Firefox, Highlight Matching Tag, Paste JSON as Code, MySQL, Github Respositories, AWS Toolkit, Docker, Snowflake Driver for SQLTools, SQLTools PostgreSQL/Redshift Driver, SQL(BigQuery), sqlfluff, one of the dbt ones
-    * Select your python interpreter
+    * `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See [Mac OS](mac-os_thru_2021.md) in this repo.
+1. Log into Zoom and Microsoft Teams (and Webex) to make sure your mic and video are permissioned and working.
 1. Log into Pocket and Pinterest from your browser.
 1. Setup relevant email accounts in Thunderbird or other smail client.
-1. Python dev environment. Yes, yes, install an environment manager first.
-    ```bash
-    sudo apt install python3-pip`
-    sudo pip3 install pandas
-    ``` 
 
 
-### Install via Terminal
-1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
+### Configure via Terminal
+1. `gnome-tweaks` will open some configuration settings. 
+    * General > "Suspend when laptop lid is closed" to on
+    * Startup Applications >
+        * Dropbox (should be there already)
+        * Mozilla VPN (consider)
+    * Top Bar > 
+        * Flip Weekday to on
+    * Window Titlebars > 
+        * Under Titlebar Buttons change Placement to Left. (Make it easier to switch between Mac and Linux.)
+        * Under Titlebar Actions change Double-Click to "Toggle Maximize Vertically". (Might be the Xoom answer.)
 
 
 ## Settings
@@ -280,6 +297,8 @@ sudo apt-get install git nginx gunicorn
 1. Disk level encryption
 1. Copy to or create new SSH keys for commputer
 
+## Chosen against
+1. Flameshot - way too easy to accidently upload to public web
 
 ## TODO
 1. Screenshots
