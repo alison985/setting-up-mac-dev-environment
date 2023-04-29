@@ -2,7 +2,7 @@
 > Created as a copy of the 21.04 document on 2022-07-16.
 
 ```bash
->> lsb_reelase -a
+>> lsb_release -a
 No LSB modules are available.
 Distributor ID:	Ubuntu
 Description:	Ubuntu 22.04 LTS
@@ -95,6 +95,21 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
     sudo reboot
     ```
 1. Deep sleep seems to be enabled already for 22.04. Confirm that `cat /sys/power/mem_sleep` returns `[s2idle] deep` or see [Enable Deep Sleep](https://community.frame.work/t/ubuntu-21-04-on-the-framework-laptop/2722/8)
+1. Install Sublime Text 
+
+```JSON
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"translate_tabs_to_spaces": true, 
+    "highlight_modified_tabs": true, 
+    "bold_folder_labels": true, 
+    "show_encoding": true, 
+    "binary_file_patterns": ["*.epub"],
+    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS"],
+
+}
+```
 
 
 ## Install as One-offs
@@ -114,7 +129,7 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
 * GIMP (non-vector art, but easier). Note "digital signatures" in this app means signed certificate signatures. To add an image signature you have to add a new layer based on opening a file. Then you have to scale the image signature layer by clicking on the layer name and scaling that layer specifically.
 * Inkscape (vector art)
 * postman (API call making and testing)
-* ?? qownnotes (notes)
+* ?? qownnotes (notes) / Joplin
 * Slack
     * Login to Slack
 * VLC (video)
