@@ -147,6 +147,7 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
     sudo snap install teams-for-linux           #install Microsoft Teams
     ```
 1. [VSCodium - the privacy-aware Visual Studio Code](https://github.com/VSCodium/vscodium). Text-based coding IDE. Binary releases of VS Code without MS branding/telemetry/licensing 
+1. Extension Manager
 
 
 ## Install from Flatpak
@@ -264,6 +265,7 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
 
 
 ### Configure via Terminal
+1. `sudo apt-get install chrome-gnome-shell` to be able to [add gnome extensions](https://wiki.gnome.org/action/show/Projects/GnomeShellIntegration/Installation?action=show&redirect=Projects%2FGnomeShellIntegrationForChrome%2FInstallation#Ubuntu_Linux) from the browser (later linux versions gnome-browser-connector)
 1. `gnome-tweaks` will open some configuration settings. 
     * General > "Suspend when laptop lid is closed" to on
     * Startup Applications >
