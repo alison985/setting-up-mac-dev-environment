@@ -262,6 +262,13 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
 1. Log into Pocket and Pinterest from your browser.
 1. Setup relevant email accounts in Thunderbird or other smail client.
 1. Plug-in printer to get it recognized and print test page.
+1. Install GNOME Extensions. I'm experimenting with the following.
+    * [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
+    * [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
+    * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
+    * [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
+
+
 
 
 ### Configure via Terminal
