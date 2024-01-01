@@ -247,6 +247,20 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
     (password)
     ```
 
+    Create user for postgres and system. Something like this.
+    ```bash
+    createuser [username]
+    sudo apt install postgresql-contrib
+    sudo -i -u postgres
+    su - [admin username]
+    cd [directory to save postgres db]
+    sudo adduser [username]
+    sudo -u [username] psql
+    ```
+
+1. Navicat 
+    After downloaded, `cd` to directory in terminal and `./navicat16-premium-en.AppImage`.
+
 1. Install some servers. [Source](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
     ```bash
     sudo apt-get install git nginx gunicorn
