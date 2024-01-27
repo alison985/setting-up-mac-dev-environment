@@ -101,7 +101,7 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	"translate_tabs_to_spaces": true, 
+    "translate_tabs_to_spaces": true, 
     "highlight_modified_tabs": true, 
     "bold_folder_labels": true, 
     "show_encoding": true, 
@@ -146,12 +146,12 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
     sudo ln -s /var/lib/snapd/snap /snap        #make sym link
     sudo snap install teams-for-linux           #install Microsoft Teams
     ```
-1. [VSCodium - the privacy-aware Visual Studio Code](https://github.com/VSCodium/vscodium). Text-based coding IDE. Binary releases of VS Code without MS branding/telemetry/licensing 
+1. I never use VSCodium, so strike it from instructions. ~~[VSCodium - the privacy-aware Visual Studio Code](https://github.com/VSCodium/vscodium). Text-based coding IDE. Binary releases of VS Code without MS branding/telemetry/licensing~~
 1. Extension Manager
 
 
 ## Install from Flatpak
-1. Install Toggl Timer. [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
+1. Toggl stopped supporting Linux desktop app. -Install Toggl Timer. [Linux instructions with flatpak](https://support.toggl.com/en/articles/2410832-toggl-track-desktop-app-for-linux).
     * [install flatpak](https://flatpak.org/setup/Ubuntu)
         ```bash
         sudo apt install flatpak
@@ -159,7 +159,7 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         ```
     * Restart.
-    * Open "Software" app. Search for toggl and install "Toggl Track".
+    * Open "Software" app. Search for toggl and install "Toggl Track".-
 1. Install the Github Desktop app. 
     * In the app, login to Github.
     * Clone repos from Gitlab with your Gitlab personal access token in Terminal.
@@ -168,7 +168,8 @@ I integrated lots of info from lots of thread, however the [Official Frame.work 
 ## Install for Development Environment
 
 1. Python
-Note, `python` does not work in the Terminal. That's because there's no alias from python3 to python. If `python` does work then `.bashrc` has to refer to /usr/bin/python instead of what's below. Yes, the lack of this alias then creates a mis-match between virtualenv(wrapper) and the VSCodium python interpreter setting. That said, I have yet to try VSCodium to run Python, so maybe it can't detect the /python3(non-alias) version? Python 3.10.4 is the result in the Terminal and and Python 3.10.6 is mentioned in the VSCodium dialogue to select a python interpreter, which strengthens this theory.
+
+Note, `python` does not work in the Terminal. That's because there's no alias from python3 to python. If `python` does work then `.bashrc` has to refer to /usr/bin/python instead of what's below. ~~Yes, the lack of this alias then creates a mis-match between virtualenv(wrapper) and the VSCodium python interpreter setting. That said, I have yet to try VSCodium to run Python, so maybe it can't detect the /python3(non-alias) version? Python 3.10.4 is the result in the Terminal and and Python 3.10.6 is mentioned in the VSCodium dialogue to select a python interpreter, which strengthens this theory.~~
  
 :shrug: You will have virtualenv and virtualenvwrapper for MyCroft and python scripting without Docker containers.
 
@@ -208,7 +209,7 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
     # 10. Run: workon temp
     # 11. The virtual environment is activated. Maybe you want to install pandas.
     ```
-1. Open VSCodium(privacy version of Visual Studio Code) that was installed above. 
+~~1. Open VSCodium(privacy version of Visual Studio Code) that was installed above. 
     * Color Theme: Monokai Dimmed
     * Language support: 
         * Search `@builtin` will have the following installed: HTML, JavaScript, JSON, Markdown, Python, Shell Script, SQL, and YAML Language Basics
@@ -219,8 +220,7 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
             * an icon package (Material Icon Theme by PKief with 107k+ downloads)
             * Rainbow CSV
         * Consider in future: Bookmarks, XML, Python Extension Pack, Bootstrap 4 and/or Bootstrap 5 & Font Awesome Snippets, Debugger for Firefox, Highlight Matching Tag, Paste JSON as Code, MySQL, Github Respositories, AWS Toolkit, Docker, Snowflake Driver for SQLTools, SQLTools PostgreSQL/Redshift Driver, SQL(BigQuery), sqlfluff, one of the dbt ones, Color Picker or Color Highlight or something else, a TODO one
-
-    * Select your python interpreter (Recommended: /usr/bin/python Python 3.10.6 64-bit)
+    * Select your python interpreter (Recommended: /usr/bin/python Python 3.10.6 64-bit)~~ 
 
 1. [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and follow the [post-install linux instructions](https://docs.docker.com/engine/install/linux-postinstall/)
 
@@ -269,7 +269,7 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
 
 ## Configuration
 1. If you haven't for awhile, this is a good time to restart.
-1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, System Monitor, Settings, Firefox, Files, Slack, Zoom, Calculator, LibreOffice, Note-taking app(Joplin). Others to consider: screenshot, Thunderbird or email client, "Software"(instead of Ubuntu Software)
+1. Favorite Apps to your dock/sidebar. You want a minimum of: Terminal, System Monitor, Settings, Firefox, Files, Slack, Zoom, Calculator, Note-taking app(Joplin)), Thunderbird or email client, and "Software"(instead of Ubuntu Software)
 1. Change dot files to personal defaults
     * DO WITH CAUTION, these are out of date and probably are missing things from above. `.bash_profile` on Mac = `.profile` on Linux Ubuntu. See [Mac OS](mac-os_thru_2021.md) in this repo.
 1. Log into Zoom and Microsoft Teams (and Webex) to make sure your mic and video are permissioned and working.
@@ -281,8 +281,6 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
     * [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
     * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
     * [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
-
-
 
 
 ### Configure via Terminal
@@ -361,6 +359,7 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
 
 ## Chosen against
 1. Flameshot - way too easy to accidently upload to public web
+2. VSCodium - I can't get used to it.
 
 ## TODO
 1. Screenshots
