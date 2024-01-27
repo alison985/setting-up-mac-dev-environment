@@ -229,34 +229,37 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
     wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
     sudo apt-get update
-    sudo apt-get install postgresql
+    sudo apt-get install postgresql postgresql-contrib
     sudo su - postgres
     psql
     ```
 
-    OPTIONAL STEPS (good for finding port that postgres is running on. Default is 5432.
-    Postgres:
+    Make sure postgres is running and get to a place you can run commands:
+   ```postgresql
+   sudo systemctl start postgresql.service
+   sudo -i -u postgres
+   ```
+
+    Find the port Postgres is running on. Default is 5432.
     ```postgresql
     \conninfo
     \q
     ```
 
-    Command line:
+    Create user for postgres and system. Assumes `postgresql-contrib` installed above. [Reference page](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04)
     ```bash
-    su MAINUSERNAME
-    (password)
-    ```
-
-    Create user for postgres and system. Something like this.
-    ```bash
+    #in shell prompt
     createuser [username]
-    sudo apt install postgresql-contrib
-    sudo -i -u postgres
     su - [admin username]
     cd [directory to save postgres db]
     sudo adduser [username]
     sudo -u [username] psql
     ```
+    ```postgresql
+    #in postgres prompt
+    createuser [username] --interactive
+    ```
+    
 
 1. Navicat 
     After downloaded, `cd` to directory in terminal and `./navicat16-premium-en.AppImage`.
