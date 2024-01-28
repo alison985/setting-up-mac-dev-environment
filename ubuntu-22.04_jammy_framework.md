@@ -255,11 +255,18 @@ Note, `python` does not work in the Terminal. That's because there's no alias fr
     sudo adduser [username]
     sudo -u [username] psql
     ```
-    ```postgresql
-    #in postgres prompt
-    createuser [username] --interactive
     ```
-    
+    #in postgres prompt
+    createuser [new_username] --interactive
+    #answer prompts
+    createdb [new_username]
+    \conninfo #to check, especially port
+    \password #set password
+    exit
+    # bash back to yourself `sudo -i -u [computer_user]`
+    # bash create a linux user to match the postgres user `sudo adduser [new_username]` #use the same pw as the postgres user to avoid confusion.
+    #answer prompts
+    ```
 
 1. Navicat 
     After downloaded, `cd` to directory in terminal and `./navicat16-premium-en.AppImage`.
